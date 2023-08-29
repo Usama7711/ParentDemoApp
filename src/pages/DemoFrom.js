@@ -32,10 +32,11 @@ const DemoFrom = () => {
         setFormData((prevData) => ({ ...prevData, "email": value }));
     };
     // Country
-    // const handleCountryChange = (code) => {
-    //     setCountryList(code);
-    //     handelClickCountry();
-    // };
+    const handleCountryChange = (code) => {
+        setCountryList(code);
+        // handelClickCountry();
+    };
+    console.log(countryList)
     //CIty
     const handleChangeCity = (e) => {
         const { city, value } = e.target;
@@ -43,13 +44,13 @@ const DemoFrom = () => {
     };
 
 
-    const handleCountryChange = (code) => {
-        setCountryList(code);
-        // handelClickCountry();
-    };
+    // const handleCountryChange = (code) => {
+    //     setCountryList(code);
+    //     // handelClickCountry();
+    // };
 
 
-    console.log("Form Data" , formData)
+    console.log("Form Data", formData)
     return (
         <main className="DemoFormMian">
             <div className="DemoFrom-wrapper">
@@ -133,10 +134,10 @@ const DemoFrom = () => {
                                         <PhoneInput
                                             country={countryList?.toLocaleLowerCase()}
                                             className="formsForValid"
-                                        onChange={(number, country) => {
-                                            setFormData((prevData) => ({ ...prevData, "number": '+' + number }));
-                                            // handleChangeNumber()
-                                        }}
+                                            onChange={(number, country) => {
+                                                setFormData((prevData) => ({ ...prevData, "number": '+' + number }));
+                                                // handleChangeNumber()
+                                            }}
 
                                         />
 
