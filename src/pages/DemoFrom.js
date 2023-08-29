@@ -34,6 +34,7 @@ const DemoFrom = () => {
     // Country
     const handleCountryChange = (code) => {
         setCountryList(code);
+        setFormData((prevData) => ({ ...prevData, "country": code }));
         // handelClickCountry();
     };
     console.log(countryList)
@@ -44,13 +45,7 @@ const DemoFrom = () => {
     };
 
 
-    // const handleCountryChange = (code) => {
-    //     setCountryList(code);
-    //     // handelClickCountry();
-    // };
-
-
-    console.log("Form Data", formData)
+    
     return (
         <main className="DemoFormMian">
             <div className="DemoFrom-wrapper">
