@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import auth_bg from "../assets/images/bread_bg.svg";
 import logo from "../assets/images/logo.svg";
 import ic_otp_btn from "../assets/images/ic_otp_btn.svg";
@@ -8,11 +8,13 @@ import Form from "react-bootstrap/Form";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import ReactFlagsSelect from "react-flags-select";
 import PhoneInput from "react-phone-input-2";
+import axios from "axios";
 // import PhoneInput from 'react-phone-input-2'
 
 
 const DemoFrom = () => {
     const [countryList, setCountryList] = useState("")
+    const [oTPFiled, setOTPFiled] = useState(false)
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
@@ -21,7 +23,7 @@ const DemoFrom = () => {
         city: "",
         number: ""
     })
-
+    console.log(formData)
     const handleChangeName = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, "name": value }));
@@ -44,8 +46,68 @@ const DemoFrom = () => {
         setFormData((prevData) => ({ ...prevData, "city": value }));
     };
 
+    const BaseURL = "https://api-demo.edsys.in:3008"
 
-    
+    // Get Details
+    const [geoData, setGeoData] = useState("")
+    const geoDataFun = () => {
+        axios.get("https://api-demo.edsys.in:3008/api/demo/form/get-geo-details").then((res, err) => {
+            setGeoData(res.data.data)
+            setCountryList(res.data.data.country_code)
+            setFormData((prevData) => ({ ...prevData, "country": res.data.data.country_code }));
+            setFormData((prevData) => ({ ...prevData, "city": res.data.data.city }));
+        })
+    }
+    useEffect(() => {
+        geoDataFun()
+    }, [])
+    console.log(geoData)
+
+    const VerifayOTP = () => {
+        if (formData.number) {
+            setOTPFiled(true)
+            handleSendOtp()
+        } else {
+            alert("Enter Phone Number")
+        }
+    }
+
+    // otp Send
+    const handleSendOtp = () => {
+        let url = 'https://api-demo.edsys.in:3008/api/demo/form/handle-otp';
+        const data = {
+            "action": "send",
+            "number": (formData.number),
+            "email": (formData.email),
+        };
+        axios.post(url, data).then((response) => {
+            // setOtpfiled(true)
+        }).catch((err) => {
+            console.log(err)
+            setOTPFiled(false)
+        })
+    };
+
+
+    // Form Submit 
+    const handleFormOtp = (e) => {
+        // setIsLoading(true);
+        let url = 'https://api-demo.edsys.in:3008/api/demo/form/submit-details';
+        const data = {
+            "name": (formData.name),
+            "email": (formData.email),
+            "number": (formData.number),
+            "country": (formData.country),
+            "city": (formData.city),
+            //   "utm_source"/: getUTMsource
+        };
+        axios.post(url, data).then((response) => {
+            //   handleVerifayOtp()
+        }).catch((err) => {
+            console.log(err)
+        })
+    };
+
     return (
         <main className="DemoFormMian">
             <div className="DemoFrom-wrapper">
@@ -125,7 +187,7 @@ const DemoFrom = () => {
                                 </div>
                                 {/* pho */}
                                 <div className="col-lg-6">
-                                    <div className="fieldSetCUST margin-b-input">
+                                    <div className="fieldSetCUST margin-b-input phoneNumberFild">
                                         <PhoneInput
                                             country={countryList?.toLocaleLowerCase()}
                                             className="formsForValid"
@@ -149,8 +211,29 @@ const DemoFrom = () => {
                                         <span className="legendHere">
                                             Phone Number<span className="ashhStar"> &#42;</span>{" "}
                                         </span>
+                                        <div className="Verify" onClick={() => { VerifayOTP() }}>
+                                            Verify
+                                        </div>
                                     </div>
                                 </div>
+                                {oTPFiled === true ?
+                                    <div className="col-lg-6">
+                                        <div className="fieldSetCUST margin-b-input">
+                                            <Form.Control
+                                                className="formsForValid"
+                                                // required
+                                                autocomplete="nope"
+                                                type="text"
+                                                placeholder="Enter Your 6 Digit otp"
+                                            />
+                                            <Form.Control.Feedback type="invalid">
+                                                Please Type Your OTP.
+                                            </Form.Control.Feedback>
+                                            <span className="legendHere">
+                                                OTP<span className="ashhStar"> &#42;</span>{" "}
+                                            </span>
+                                        </div>
+                                    </div> : null}
                                 {/* city */}
                                 <div className="col-lg-6">
                                     <div className="fieldSetCUST margin-b-input">
@@ -161,6 +244,7 @@ const DemoFrom = () => {
                                             type="text"
                                             placeholder="Enter Your City Name"
                                             onChange={handleChangeCity}
+                                            defaultValue={geoData.city}
                                         />
                                         <Form.Control.Feedback type="invalid">
                                             Please Type Your City Name.
@@ -175,6 +259,7 @@ const DemoFrom = () => {
                             <div className="row auth-btns m-0">
                                 <button
                                     className="login-btn col-12"
+
                                 >
                                     Verify Details
                                 </button>

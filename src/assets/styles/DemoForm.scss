@@ -1,415 +1,443 @@
 .DemoFormMian {
-    // height: 100vh;
-    width: 100%;
-    background: linear-gradient(180deg, #edf3d6 0%, #eed3e9 100%);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  // height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #edf3d6 0%, #eed3e9 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    input:-webkit-autofill {
-        background-color: #fff !important;
+  input:-webkit-autofill {
+    background-color: #fff !important;
+  }
+
+  input:-webkit-internal-autofill-selected {
+    background-color: #fff !important;
+  }
+
+  @media all and (max-width: 800px) {
+    #Lock .auth-card {
+      width: 700px;
+      max-width: 800px;
+
+      .brand-logo {
+        left: 190px;
+      }
     }
 
-    input:-webkit-internal-autofill-selected {
-        background-color: #fff !important;
+  }
+
+  @media all and (max-width: 700px) {
+    #ParentSignUp .auth-card {
+      padding: 80px 20px 20px 20px;
     }
 
-    @media all and (max-width: 800px) {
-        #Lock .auth-card {
-            width: 700px;
-            max-width: 800px;
-
-            .brand-logo {
-                left: 190px;
-            }
-        }
-
+    .registration-main .registration-auth-wrapper .registration-card .brand-logo {
+      width: 240px;
     }
 
-    @media all and (max-width: 700px) {
-        #ParentSignUp .auth-card {
-            padding: 80px 20px 20px 20px;
-        }
-
-        .registration-main .registration-auth-wrapper .registration-card .brand-logo {
-            width: 240px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card {
-            padding: 75px 20px 20px 20px;
-        }
-
-        #Lock .lock-outer-main {
-            flex-direction: column;
-
-            .left {
-                margin-bottom: 15px;
-            }
-        }
-
-        #Lock .lock-outer-main .right {
-            margin-left: 0;
-        }
-
-        #Lock .lock-outer-main .left img {
-            width: 150px;
-            height: 150px;
-        }
-
-        #Lock .auth-card {
-            padding: 75px 20px 20px 20px;
-            width: 600px;
-            max-width: 800px;
-
-            .brand-logo {
-                left: 190px;
-            }
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            left: 140px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card {
-            width: 600px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            width: 250px;
-        }
+    .auth-wrapper .login-wrapper .auth-card {
+      padding: 75px 20px 20px 20px;
     }
 
-    @media all and (max-width: 600px) {
-        #ParentSignUp .p-tabview .p-tabview-nav li {
-            margin-bottom: 10px;
-        }
+    #Lock .lock-outer-main {
+      flex-direction: column;
 
-        #ParentSignUp .p-tabview .p-tabview-nav {
-            flex-wrap: wrap;
-        }
-
-        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
-            padding: 0 5px !important;
-        }
-
-        #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
-            width: 60px;
-        }
-
-        #Lock .auth-card {
-            width: 500px;
-            max-width: 800px;
-
-            .brand-logo {
-                left: 130px;
-            }
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            left: 125px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card {
-            width: 500px;
-        }
-
-        #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
-            border-radius: 10px 0 0 10px;
-        }
-
-        #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
-            border-radius: 0 10px 10px 0;
-        }
+      .left {
+        margin-bottom: 15px;
+      }
     }
 
-    @media all and (max-width: 500px) {
-        #LoginWithOTP .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
-            font-size: 13px;
-        }
-
-        #ParentSignUp .email-otp {
-            padding-top: 25px;
-        }
-
-        #ParentSignUp .fieldSetCUST {
-            margin-bottom: 0;
-        }
-
-        #ParentSignUp .p-tabview-nav-container {
-            margin-bottom: 10px;
-        }
-
-        #ParentSignUp .p-tabview .p-tabview-nav li {
-            margin-bottom: 10px;
-        }
-
-        #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
-            border-radius: 10px 0 0 10px;
-        }
-
-        #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
-            border-radius: 0 10px 10px 0;
-        }
-
-        #LoginWithOTP .p-tabview .p-tabview-nav {
-            flex-wrap: wrap;
-        }
-
-        #LoginWithOTP .p-tabview .p-tabview-nav li .p-tabview-nav-link {
-            font-size: 13px;
-        }
-
-        #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
-            width: 50px;
-        }
-
-        #Lock .auth-card {
-            width: 400px;
-            max-width: 800px;
-
-            .brand-logo {
-                left: 85px;
-            }
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            left: 70px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card {
-            width: 400px;
-        }
+    #Lock .lock-outer-main .right {
+      margin-left: 0;
     }
 
-    @media all and (max-width: 400px) {
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            width: 200px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .auth-btns .login-otp-btn {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .auth-btns .login-register-btn {
-            width: 100%;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .auth-btns .outerbtn-main {
-            flex-direction: column;
-        }
-
-        #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
-            width: 45px;
-        }
-
-        #Lock .auth-card {
-            width: 350px;
-
-            .brand-logo {
-                left: 75px;
-            }
-        }
-
-        .auth-wrapper .login-wrapper .auth-card .brand-logo {
-            left: 75px;
-        }
-
-        .auth-wrapper .login-wrapper .auth-card {
-            width: 350px;
-        }
+    #Lock .lock-outer-main .left img {
+      width: 150px;
+      height: 150px;
     }
+
+    #Lock .auth-card {
+      padding: 75px 20px 20px 20px;
+      width: 600px;
+      max-width: 800px;
+
+      .brand-logo {
+        left: 190px;
+      }
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 140px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 600px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      width: 250px;
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    #ParentSignUp .p-tabview .p-tabview-nav li {
+      margin-bottom: 10px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav {
+      flex-wrap: wrap;
+    }
+
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      padding: 0 5px !important;
+    }
+
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 60px;
+    }
+
+    #Lock .auth-card {
+      width: 500px;
+      max-width: 800px;
+
+      .brand-logo {
+        left: 130px;
+      }
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 125px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 500px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
+      border-radius: 10px 0 0 10px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    #LoginWithOTP .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+      font-size: 13px;
+    }
+
+    #ParentSignUp .email-otp {
+      padding-top: 25px;
+    }
+
+    #ParentSignUp .fieldSetCUST {
+      margin-bottom: 0;
+    }
+
+    #ParentSignUp .p-tabview-nav-container {
+      margin-bottom: 10px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav li {
+      margin-bottom: 10px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
+      border-radius: 10px 0 0 10px;
+    }
+
+    #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
+      border-radius: 0 10px 10px 0;
+    }
+
+    #LoginWithOTP .p-tabview .p-tabview-nav {
+      flex-wrap: wrap;
+    }
+
+    #LoginWithOTP .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      font-size: 13px;
+    }
+
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 50px;
+    }
+
+    #Lock .auth-card {
+      width: 400px;
+      max-width: 800px;
+
+      .brand-logo {
+        left: 85px;
+      }
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 70px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 400px;
+    }
+  }
+
+  @media all and (max-width: 400px) {
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      width: 200px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .login-otp-btn {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .login-register-btn {
+      width: 100%;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .outerbtn-main {
+      flex-direction: column;
+    }
+
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 45px;
+    }
+
+    #Lock .auth-card {
+      width: 350px;
+
+      .brand-logo {
+        left: 75px;
+      }
+    }
+
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 75px;
+    }
+
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 350px;
+    }
+  }
 }
-.special-label{
-    display: none;
+
+.special-label {
+  display: none;
 }
+
 .DemoFrom-wrapper {
-    background-image: url(../images/auth_bg.svg);
-    width: 100vw;
-    // max-width: 945px;
-    height: 100vh;
-    // max-height:800px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: center;
-    background-position-x: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .login-wrapper {
-  
-      .auth-card {
+  background-image: url(../images/auth_bg.svg);
+  width: 100vw;
+  // max-width: 945px;
+  height: 100vh;
+  // max-height:800px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-wrapper {
+
+    .auth-card {
+      position: relative;
+      padding: 95px 40px 40px 40px;
+      height: auto;
+      width: 600px;
+      max-width: 622px;
+      background: #ffffff;
+      border-radius: 10px;
+
+      .brand-logo {
+        left: calc(300px - 160px);
+        height: 130px;
+        width: 320px;
+        position: absolute;
+        top: -65px;
+      }
+
+      .fieldSetCUST {
         position: relative;
-        padding: 95px 40px 40px 40px;
-        height: auto;
-        width: 600px;
-        max-width: 622px;
-        background: #ffffff;
-        border-radius: 10px;
-        .brand-logo {
-          left: calc(300px - 160px);
-          height: 130px;
-          width: 320px;
+
+        .dateChapter {
+          width: 100%;
+        }
+
+        .caledarImg {
           position: absolute;
-          top: -65px;
+          top: 12px;
+          right: 10px;
         }
-  
-        .fieldSetCUST {
-          position: relative;
-  
-          .dateChapter {
-            width: 100%;
-          }
-  
-          .caledarImg {
-            position: absolute;
-            top: 12px;
-            right: 10px;
-          }
-  
-          .legendHere {
-            position: absolute;
-            top: -10px;
-            left: 15px;
-            background-color: #fff;
-            font-size: 14px;
-            padding: 0px 5px;
-            color: rgba(30, 10, 27, 0.3);
-  
-            .ashhStar {
-              color: red !important;
-              font-size: 15px;
-            }
-          }
-  
-          // formSelect
-          .form-select {
-            height: 48px;
-            border-radius: 12px;
-            font-size: 14px;
-            &:invalid {
-              color: rgba(30, 10, 27, 0.6);
-            }
-  
-            &:focus {
-              box-shadow: none !important;
-              outline: none !important;
-              border-color: rgba(30, 10, 27, 0.2) !important;
-            }
-          }
-  
-          // For TextArea
-          .formsForTextArea {
-            &::placeholder {
-              color: rgba(30, 10, 27, 0.6);
-            }
-  
-            &:focus {
-              box-shadow: none !important;
-              outline: none !important;
-              border-color: rgba(30, 10, 27, 0.2) !important;
-            }
-          }
-  
-          // Form-contriol text
-          .formsForValid {
-            height: 50px;
-            border-radius: 10px;
-  
-            &::placeholder {
-              color: rgba(30, 10, 27, 0.6);
-              font-weight: 500;
-              font-size: 14px;
-            }
-  
-            &:focus {
-              box-shadow: none !important;
-              outline: none !important;
-              border-color: rgba(30, 10, 27, 0.2) !important;
-            }
+
+        .legendHere {
+          position: absolute;
+          top: -10px;
+          left: 15px;
+          background-color: #fff;
+          font-size: 14px;
+          padding: 0px 5px;
+          color: rgba(30, 10, 27, 0.3);
+
+          .ashhStar {
+            color: red !important;
+            font-size: 15px;
           }
         }
-        .forgot-pass {
-          margin-top: 10px;
-          text-align: end;
-          a {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 21px;
-  
-            color: rgba(30, 10, 27, 0.3);
-          }
-        }
-        .auth-btns {
-          .outerbtn-main {
-            justify-content: space-between;
-          }
-          .login-btn {
-            margin: 20px 0;
-            height: 40px;
-            font-weight: 500;
-            font-size: 16px;
-            text-align: center;
-            color: #ffffff;
-            background: #abc73e;
-            border-radius: 10px;
-            border: 1px solid #abc73e;
-          }
-          .login-otp-btn {
-            width: calc(50% - 10px);
-  
-            height: 40px;
-            font-weight: 500;
-            font-size: 14px;
-            text-align: center;
+
+        // formSelect
+        .form-select {
+          height: 48px;
+          border-radius: 12px;
+          font-size: 14px;
+
+          &:invalid {
             color: rgba(30, 10, 27, 0.6);
-            background: #fff;
-            border-radius: 10px;
-            border: 1px solid #abc73e;
-            border-radius: 10px;
           }
-          .login-register-btn {
-            width: calc(50% - 10px);
-  
-            height: 40px;
-            font-weight: 500;
-            font-size: 14px;
-            text-align: center;
-            color: rgba(30, 10, 27, 0.6);
-            background: #fff;
-            border-radius: 10px;
-            border: 1px solid #abc73e;
-            border-radius: 10px;
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
           }
         }
-        .footer-content {
-          margin-top: 20px;
+
+        // For TextArea
+        .formsForTextArea {
+          &::placeholder {
+            color: rgba(30, 10, 27, 0.6);
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
+          }
+        }
+
+        // Form-contriol text
+        .formsForValid {
+          height: 50px;
+          border-radius: 10px;
+
+          &::placeholder {
+            color: rgba(30, 10, 27, 0.6);
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
+          }
+        }
+      }
+
+      .forgot-pass {
+        margin-top: 10px;
+        text-align: end;
+
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+
+          color: rgba(30, 10, 27, 0.3);
+        }
+      }
+
+      .auth-btns {
+        .outerbtn-main {
+          justify-content: space-between;
+        }
+
+        .login-btn {
+          margin: 20px 0;
+          height: 40px;
+          font-weight: 500;
+          font-size: 16px;
           text-align: center;
-          label {
-            font-weight: 500;
-            font-size: 14px;
-            color: rgba(30, 10, 27, 0.6);
-            img {
-              margin: 0 4px 4px 4px;
-            }
+          color: #ffffff;
+          background: #abc73e;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+        }
+
+        .login-otp-btn {
+          width: calc(50% - 10px);
+
+          height: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+          color: rgba(30, 10, 27, 0.6);
+          background: #fff;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+          border-radius: 10px;
+        }
+
+        .login-register-btn {
+          width: calc(50% - 10px);
+
+          height: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+          color: rgba(30, 10, 27, 0.6);
+          background: #fff;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+          border-radius: 10px;
+        }
+      }
+
+      .footer-content {
+        margin-top: 20px;
+        text-align: center;
+
+        label {
+          font-weight: 500;
+          font-size: 14px;
+          color: rgba(30, 10, 27, 0.6);
+
+          img {
+            margin: 0 4px 4px 4px;
           }
         }
-        .heading {
-          margin-bottom: 25px;
-          border-bottom: 1px solid rgba(30, 10, 27, 0.3);
-          text-align: center;
-          label {
-            padding-bottom: 10px;
-            font-weight: 500;
-            font-size: 16px;
-            text-transform: capitalize;
-  
-            color: rgba(30, 10, 27, 0.6);
-          }
+      }
+
+      .heading {
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+        text-align: center;
+
+        label {
+          padding-bottom: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          text-transform: capitalize;
+
+          color: rgba(30, 10, 27, 0.6);
         }
       }
     }
   }
+}
+.phoneNumberFild{
+  position: relative;
+  .Verify{
+    background-color: green;
+    padding: 7px 13px;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    right:1px;
+    top: 0;
+    cursor: pointer;
+  }
+}
