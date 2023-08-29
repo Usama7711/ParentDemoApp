@@ -1,0 +1,164 @@
+.cx-sidebar {
+  .cx-sidebar-wrapper {
+    transition: all 0.3s;
+    width: 230px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: calc(100vh - 40px);
+    padding: 20px 0 20px 10px;
+    .brand-logo {
+      padding: 0 20px 0 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .menus-wrapper {
+    .menu-link {
+      text-decoration: none;
+    }
+    margin-top: 15px;
+    .acordion-wrapper-active {
+      background-color: #fff !important;
+    }
+    .activeMenu {
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        border-radius 0.15s ease;
+      button {
+        &::after {
+          background-image: url(../images/ic_active_arrow.svg) !important;
+        }
+      }
+      .menu-name {
+font-weight: 600 !important;
+        color: #954386 !important;
+      }
+      background-color: #fcfcfb !important;
+    }
+
+    .menu-outer-warpper {
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        border-radius 0.15s ease;
+      border-radius: 12px 0 0 12px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      .icon {
+        img {
+          height: 20px;
+          width: 20px;
+          margin-right: 15px;
+        }
+      }
+      .menu-name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: -0.075em;
+        color: rgba(30, 10, 27, 0.6);
+      }
+    }
+
+    .accordion {
+      .accordion-button:not(.collapsed) {
+        box-shadow: none;
+      }
+      .accordion-button:not(.collapsed)::after {
+        background-image: url(../images/ic_active_arrow.svg) !important;
+        transform: rotate(90deg);
+        background-size: 9px;
+      }
+      .accordion-item {
+        padding: 1.5px;
+        background-color: transparent;
+        border-radius: 12px 0 0 12px;
+        // margin-top: 10px;
+        border: none;
+        button {
+          font-size: 0;
+          padding: 0 20px 0 0;
+          background-color: transparent;
+          &::after {
+            width: 11px;
+            height: 11px;
+            background-image: url(../images/ic_right_arrow.svg);
+            background-size: 9px;
+            background-position: right;
+          }
+          &:focus {
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  .accordion-body {
+    margin-top: -10px;
+    padding: 0 0 0 10px;
+    padding-bottom: 15px;
+    .sub-menus {
+      .activeMenuList {
+        a {
+          color: #954386 !important;
+          font-weight: 600 !important;
+        }
+        .menu-circle {
+          background: linear-gradient(
+            180deg,
+            #b23a9c 0%,
+            #79266a 100%
+          ) !important;
+          border: none !important;
+        }
+      }
+      ul {
+        margin-bottom: 0;
+        padding-left: 12px;
+        list-style: none;
+
+        .menu-circle-active {
+          background: linear-gradient(
+            180deg,
+            #b23a9c 0%,
+            #79266a 100%
+          ) !important;
+          border: none !important;
+        }
+        .menu-circle {
+          margin-right: 23px;
+          display: inline-block;
+          border-radius: 50%;
+          height: 6px;
+          width: 6px;
+          border: 1px solid rgba(30, 10, 27, 0.6);
+        }
+        li {
+          margin-top: 5px;
+          a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+
+            color: rgba(30, 10, 27, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
+.logout {
+  width: 220px;
+  background-color: #eed3e9;
+  position: fixed;
+  bottom: 0;
+}
+
+.sidebar-button {
+  display: none;
+}

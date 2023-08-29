@@ -1,0 +1,1150 @@
+// Main kids page styles
+.my_kids {
+  .allKidsCard {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+
+    .userBg {
+      margin-bottom: 10px !important;
+    }
+
+    .titleImg {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+
+    .textProp {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      .head {
+        font-weight: 600;
+        font-size: 15px;
+        color: #000;
+        margin-right: 0.3rem;
+      }
+    }
+
+    .belowCardDet {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .cardTxt {
+        .keyLab {
+          font-weight: 400;
+          font-size: 12px;
+          color: rgba(30, 10, 27, 0.3);
+          margin-right: 0.5rem;
+        }
+
+        .ValLab {
+          font-weight: 400;
+          font-size: 12px;
+          color: #000;
+        }
+
+        .purpleVal {
+          font-weight: 400;
+          font-size: 12px;
+          color: #954386;
+        }
+      }
+    }
+  }
+}
+
+// View Cards Details
+.viewKids_details,
+.View_Registration {
+  .profileCard {
+    background: linear-gradient(180deg,
+        rgba(237, 243, 214, 0.5) 0%,
+        rgba(238, 211, 233, 0.5) 100%);
+    height: 90px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .userCard {
+      position: relative;
+      display: flex;
+      width: 50%;
+
+      .imgSelector {
+        cursor: pointer;
+
+        .editImg {
+          position: absolute;
+          top: -25px;
+          left: 10px;
+          height: 120px;
+          width: 120px;
+        }
+      }
+
+      .userImg {
+        position: absolute;
+        left: 10px;
+        top: -15px;
+        height: 110px;
+        width: 110px;
+      }
+
+      .UserName {
+        position: absolute;
+        top: 48px;
+        left: 115px;
+        font-size: 16px;
+        color: rgba(30, 10, 27, 0.6);
+      }
+    }
+
+    .notificationsMain {
+      display: flex;
+
+      .mailBox,
+      .BellBox {
+        position: relative;
+        margin-right: 1rem;
+
+        .popUpTxt {
+          background-color: #f3cee7;
+          position: absolute;
+          bottom: 10px;
+          left: 12px;
+          height: 21px;
+          width: 21px;
+          border-radius: 50%;
+          font-size: 8px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .kidsHeading {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(30, 10, 27, 0.1);
+    width: 100%;
+
+    .headTxt {
+      color: #954386;
+      font-size: 16px;
+    }
+
+    .detailImg {
+      cursor: pointer;
+    }
+  }
+
+  .generalTitle {
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(30, 10, 27, 0.1);
+
+    .geneTxt {
+      color: #954386;
+      font-size: 16px;
+    }
+  }
+}
+
+// Edit kids details
+.Edit_KidsDetails {
+  .editDetailHead {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(30, 10, 27, 0.1);
+
+    .editTxt {
+      color: #954386;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Id card table component styles
+.Id_cards {
+  .tableBorders {
+    // border: 1px solid rgba(30, 10, 27, 0.1);
+    border-radius: 20px;
+    overflow-x: auto;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+      0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+
+    table {
+      min-width: 900px;
+    }
+
+    .table {
+      #shadowHead {
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+          0px 3px 8px -1px rgba(50, 50, 71, 0.05) !important;
+
+        tr {
+
+          th {
+            &:first-child {
+              padding-left: 2rem !important;
+            }
+
+            background: rgba(254, 249, 251, 0.65);
+            border-bottom: 1px solid rgba(30, 10, 27, 0.1) !important;
+            opacity: 0.6;
+            font-weight: 400;
+            padding: 1rem;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(30, 10, 27, 0.6);
+          }
+
+          .insideTd {
+            width: 18%;
+          }
+        }
+      }
+
+      .tableBody {
+        tr {
+          td {
+            &:first-child {
+              padding-left: 2rem !important;
+            }
+
+            // padding: 10px !important;
+            color: #1e0a1b;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 1rem 1rem;
+            line-height: 20px;
+            border-bottom: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Fees Section Tabs and styles
+.Fees {
+  .feesCard {
+    .nav-fill .nav-item {
+      flex: none !important;
+      margin-right: 1rem;
+    }
+
+    .nav-tabs {
+      border-bottom: none !important;
+    }
+
+    .nav-tabs .nav-link {
+      border: 1px solid #954386 !important;
+      color: #954386 !important;
+      width: 100% !important;
+      border-radius: 10px !important;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #954386 !important;
+      color: #fff !important;
+    }
+
+    #innerSlideTab {
+      .p-tabview .p-tabview-nav {
+        justify-content: space-between !important;
+        background: transparent !important;
+      }
+
+      .p-tabview .p-tabview-nav li {
+        width: 33.5%;
+      }
+
+      .p-tabview .p-tabview-panels {
+        padding: 0px !important;
+      }
+
+      .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background: transparent !important;
+        color: #954386 !important;
+        font-weight: 600 !important;
+      }
+
+      .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+        background-color: #954386;
+      }
+
+      .p-unselectable-text .p-tabview-selected {
+        background-color: red !important;
+      }
+
+      .p-tabview-nav-link {
+        justify-content: center !important;
+      }
+
+      .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        background: transparent !important;
+        border-color: transparent transparent #abc73e !important;
+        color: rgba(30, 10, 27, 0.6) !important;
+        font-weight: 400;
+        border-width: 0 0 1px 0;
+      }
+
+      .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+        box-shadow: none !important;
+      }
+
+      .p-tabview .p-tabview-panels {
+        background-color: transparent !important;
+      }
+    }
+
+    #TransactionsFlexy {
+      .p-tabview .p-tabview-nav {
+        justify-content: space-between !important;
+        background: transparent !important;
+      }
+
+      .p-tabview .p-tabview-nav li {
+        width: 25% !important;
+      }
+
+      .p-tabview .p-tabview-panels {
+        padding: 0px !important;
+      }
+
+      .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+        background: transparent !important;
+        color: #954386 !important;
+        font-weight: 600 !important;
+      }
+
+      .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+        background-color: #954386;
+      }
+
+      .p-unselectable-text .p-tabview-selected {
+        background-color: red !important;
+      }
+
+      .p-tabview-nav-link {
+        justify-content: center !important;
+      }
+
+      .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        background: transparent !important;
+        border-color: transparent transparent #abc73e !important;
+        color: rgba(30, 10, 27, 0.6) !important;
+        font-weight: 400;
+        border-width: 0 0 1px 0;
+      }
+
+      .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+        box-shadow: none !important;
+      }
+
+      .p-tabview .p-tabview-panels {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  // searchflexy inside tabs
+  #innerSlideTab,
+  #TransactionsFlexy {
+    .searchflexy {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .searchPanel {
+        position: relative;
+        margin-bottom: 0px !important;
+
+        .form-control {
+          width: 300px;
+          padding-right: 50px;
+          border-radius: 10px !important;
+          background-color: transparent !important;
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.1);
+          }
+
+          &::placeholder {
+            color: rgba(30, 10, 27, 0.3);
+            font-size: 14px;
+          }
+        }
+
+        .srchImg {
+          position: absolute;
+          top: 9px;
+          right: 15px;
+        }
+      }
+    }
+
+    .tableBorders {
+      // border: 1px solid rgba(30, 10, 27, 0.1);
+      border-radius: 20px;
+      overflow-x: auto;
+      box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+        0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+      background-color: #fff;
+
+      table {
+        min-width: 1050px;
+      }
+
+      .table {
+        #shadowHead {
+          box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+            0px 3px 8px -1px rgba(50, 50, 71, 0.05) !important;
+
+          tr {
+            th {
+              background: rgba(254, 249, 251, 0.65);
+              border-bottom: 1px solid rgba(30, 10, 27, 0.1) !important;
+              opacity: 0.6;
+              font-weight: 400;
+              padding: 1rem;
+              font-size: 14px;
+              line-height: 18px;
+              color: rgba(30, 10, 27, 0.6);
+            }
+
+            .checkBoxBright {
+              opacity: 100% !important;
+
+              .form-check-input {
+                cursor: pointer;
+
+                &:checked {
+                  box-shadow: 0px !important;
+                  background-color: #954386 !important;
+                  border: #954386 !important;
+                }
+              }
+
+
+              .form-check-input:focus {
+                outline: none !important;
+                box-shadow: none !important;
+              }
+            }
+
+            .insideTd {
+              width: 18%;
+            }
+          }
+        }
+
+        .tableBody {
+          tr {
+            td {
+              // padding: 10px !important;
+              color: #1e0a1b;
+              font-weight: 500;
+              font-size: 14px;
+              padding: 1rem 1rem;
+              line-height: 20px;
+              border-bottom: none !important;
+
+              .form-check-input {
+                cursor: pointer;
+              }
+
+              .form-check-input:checked {
+                box-shadow: 0px !important;
+                background-color: #954386 !important;
+                border: #954386 !important;
+              }
+
+              .form-check-input:focus {
+                outline: none !important;
+                box-shadow: none !important;
+              }
+
+              .StatusBlog {
+                background: rgba(235, 189, 24, 0.2);
+                border-radius: 10px;
+                padding: 3px 12px;
+                text-align: center;
+
+                .warningTxt {
+                  color: #d7ac16;
+                  font-size: 12px;
+                  height: 5px !important;
+                  width: 100px !important;
+                }
+              }
+
+              .StatusBlogSucc {
+                background: rgba(40, 193, 74, 0.2);
+                border-radius: 10px;
+                padding: 3px 12px;
+                text-align: center;
+
+                .succTxt {
+                  height: 5px !important;
+                  width: 100px !important;
+                  color: #28c14a;
+                  font-size: 12px;
+                }
+              }
+
+              .StatusBlogFailed {
+                background: rgba(249, 17, 17, 0.2);
+                border-radius: 10px;
+                padding: 3px 12px;
+                text-align: center;
+
+                .failed {
+                  color: #F91111;
+                  font-size: 12px;
+                  height: 5px !important;
+                  width: 100px !important;
+                }
+              }
+
+              .hoverImg {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .card {
+      background: #fff !important;
+      border: none !important;
+      box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+        0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+      border-radius: 16px !important;
+      margin-bottom: 20px;
+
+      .card-header {
+        background: rgba(254, 249, 251, 0.65);
+        border-bottom: none;
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+          0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+        padding: 18px;
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+
+        .headingTxt {
+          color: #954386;
+          font-size: 16px;
+        }
+      }
+
+      .card-body {
+
+        .keyTxt,
+        .valTxt {
+          font-size: 14px;
+          color: #000;
+        }
+      }
+
+      .card-footer {
+        background: rgba(254, 249, 251, 0.65);
+        border-top: none;
+        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+          0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+        padding: 15px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+
+        .footertxt {
+          color: #1e0a1b99;
+          font-size: 12px;
+        }
+
+        .keyTxt,
+        .valTxt {
+          color: #000;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .belowBtns {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Invoice_fee styles
+.Invoice_fee {}
+
+// Tabs and navs styles
+.my_kids {
+  .kidsCardSec {
+    .p-tabview .p-tabview-nav {
+      justify-content: space-between !important;
+      background: transparent !important;
+    }
+
+    .p-tabview .p-tabview-nav li {
+      width: 50% !important;
+    }
+
+    .p-tabview .p-tabview-panels {
+      padding: 0px !important;
+    }
+
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+      background: transparent !important;
+      color: #954386 !important;
+      font-weight: 600 !important;
+    }
+
+    .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+      background-color: #954386 !important;
+    }
+
+    .p-unselectable-text .p-tabview-selected {
+      background-color: red !important;
+    }
+
+    .p-tabview-nav-link {
+      justify-content: center !important;
+    }
+
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      background: transparent !important;
+      border-color: transparent transparent #abc73e !important;
+      color: rgba(30, 10, 27, 0.6) !important;
+      font-weight: 400;
+      border-width: 0 0 1px 0;
+    }
+
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+      box-shadow: none !important;
+    }
+
+    .p-tabview .p-tabview-panels {
+      background-color: transparent !important;
+    }
+  }
+}
+
+// Invoice Bill Styles
+.Invoice_fee {}
+
+// transfer_certificate styles
+.transfer_certificate {
+  .perInfoCard {
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border-radius: 16px;
+
+    .mainInnerBlog {
+      position: relative;
+      background: linear-gradient(180deg, #EDF3D6 0%, #EED3E9 100%);
+      border-radius: 16px;
+      height: 90px;
+      margin-bottom: 50px;
+
+      .imgCircle {
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+
+    .belowCon {
+      .headTxt {
+        .infoTxt {
+          color: #954386;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .cardKey {
+      color: rgba(30, 10, 27, 0.3);
+      font-size: 12px;
+    }
+
+    .cardVal {
+      color: #000;
+      font-size: 12px;
+    }
+  }
+
+  .bigCard {
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border-radius: 16px;
+
+    .headTxt {
+      .labelTxt {
+        color: #954386;
+        font-size: 16px;
+      }
+    }
+
+    .tableBorders {
+      // border: 1px solid rgba(30, 10, 27, 0.1);
+      border-radius: 20px;
+      overflow-x: auto;
+      box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+
+      table {
+        min-width: 600px;
+      }
+
+      .table {
+        margin-bottom: 0rem !important;
+
+        tr {
+          th {
+            background: rgba(254, 249, 251, 0.65);
+            border-bottom: 1px solid rgba(30, 10, 27, 0.1) !important;
+            opacity: 0.6;
+            font-weight: 400;
+            padding: 1rem;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(30, 10, 27, 0.6);
+          }
+
+          .insideTd {
+            width: 18%;
+          }
+        }
+
+        .wrapper {
+          height: 100px;
+          overflow-y: auto;
+        }
+
+        .tableBody {
+          overflow-y: auto;
+
+          tr {
+            td {
+              // padding: 10px !important;
+              color: #1E0A1B;
+              font-weight: 500;
+              font-size: 14px;
+              padding: 0.8rem 1rem;
+              line-height: 20px;
+              border-bottom: none !important;
+            }
+          }
+        }
+
+        .tfoot {
+          background: rgba(254, 249, 251, 0.65);
+          width: 100%;
+          border-bottom: transparent !important;
+
+          #footerCard {
+
+            .firstChild {
+              width: 46% !important;
+            }
+
+            .secondChild {
+              width: 53% !important;
+            }
+
+            td {
+              padding: 1rem;
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+
+          td {
+            padding: 1rem;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        #paymentDetailsCard {
+          tr {
+
+            .firstChild {
+              width: 46% !important;
+            }
+
+            .SecondChild {
+              width: 53% !important;
+            }
+          }
+        }
+      }
+    }
+
+    .belowTxtCard {
+      text-align: end;
+      margin-top: 10px;
+
+      label {
+        font-size: 10px !important;
+
+        span {
+          color: red;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+//  Request_NewTc styles
+.Request_NewTc {
+  .perInfoCard {
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border-radius: 16px;
+
+    .mainInnerBlog {
+      position: relative;
+      background: linear-gradient(180deg, #EDF3D6 0%, #EED3E9 100%);
+      border-radius: 16px;
+      height: 90px;
+      margin-bottom: 50px;
+
+      .imgCircle {
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    }
+
+    .belowCon {
+      .headTxt {
+        .infoTxt {
+          color: #954386;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .cardKey {
+      color: rgba(30, 10, 27, 0.3);
+      font-size: 12px;
+    }
+
+    .cardVal {
+      color: #000;
+      font-size: 12px;
+    }
+  }
+
+  .bigCard {
+    height: 374px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border-radius: 16px;
+
+    .headTxt {
+      .labelTxt {
+        color: #954386;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .fieldSetCUST {
+      .formsForTextArea {
+        height: auto!important;
+        padding: 1rem !important;
+      }
+    }
+  }
+}
+
+// Document styes
+.Document {
+  .DocCard {
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    height: 196px;
+
+    .headingFlex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .HeadTxt {
+        color: #27272E;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .fileWrapp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px;
+    }
+
+    .footertxt {
+      color: rgba(30, 10, 27, 0.6);
+      font-size: 11px !important;
+    }
+  }
+
+  .BorderedCard {
+    height: 196px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border: 2px dashed rgba(149, 67, 134, 0.5);
+
+    .headingFlex {
+      .HeadTxt {
+        color: #27272E;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+
+    .fileWrapp {
+      text-align: center;
+      margin: 20px 0px;
+    }
+
+    .progress-bar1 {
+      display: flex;
+    }
+
+    .pars {
+      margin-left: auto;
+      font-weight: 400;
+      font-size: 10px;
+      color: rgba(30, 10, 27, 0.6);
+    }
+
+    .progress {
+      height: 10px;
+      margin-top: 6px;
+      --bs-progress-bg: #b23a9c;
+    }
+
+    .progress-bar {
+      background-color: #abc73e;
+    }
+  }
+
+  .BorderedLabel {
+    width: 100%;
+    height: 196px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border: 2px dashed rgba(149, 67, 134, 0.5);
+    cursor: pointer;
+
+    .insiderContent {
+      text-align: center;
+
+      .detailTxt {
+        color: #954386;
+        font-size: 14px;
+      }
+
+      .browseBtn {
+        border: none;
+        background: rgba(149, 67, 134, 0.5);
+        padding: 5px 15px;
+        border-radius: 6px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Certificate styles
+.Certificate {
+  .certHeadAdj {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+
+    .leftCont {
+      .headTxt {
+        font-size: 16px;
+        color: #954386;
+        margin-bottom: 0.2rem !important;
+      }
+
+      .belowLab {
+        color: rgba(17, 17, 17, 0.5);
+        font-size: 12px;
+      }
+    }
+
+    .right {
+      .RightlAB {
+        color: rgba(17, 17, 17, 0.5);
+        font-size: 12px;
+      }
+    }
+  }
+
+  .certificateCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+
+    .insideCertificate {
+      height: auto;
+    }
+  }
+}
+
+
+
+
+// Dropdown customize css
+.allKidsCard {
+  position: relative;
+
+  .sideArrow {
+    position: absolute;
+    right: -8px;
+  }
+}
+
+.my_kids .allKidsCard .customer-option .dropdown-menu {
+  padding: 10px 5px !important;
+  width: 150px !important;
+}
+
+.my_kids .allKidsCard .customer-option .dropdown-item {
+  background-color: #fff !important;
+
+  &:hover {
+    background: rgba(149, 67, 134, 0.1) !important;
+    transition: all 0.5s !important;
+    border-radius: 5px !important;
+
+    a {
+      color: #954386 !important;
+      font-weight: 600;
+    }
+  }
+
+  a {
+    padding: 3px 0px !important;
+    color: rgba(30, 10, 27, 0.6) !important;
+    text-decoration: none;
+  }
+}
+
+// Particular dropdown styles
+.customer-option {
+  .dropdown {
+    button {
+      background-color: white;
+      border: none;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .btn-check:checked+.btn,
+  .btn.active,
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check)+.btn:active {
+    background-color: white;
+  }
+
+  .dropdown-menu {
+    inset: -30px 25px auto auto !important;
+    border-radius: 10px 10px 10px 10px;
+    min-width: 100px;
+    border: 1px solid #f6efe9;
+  }
+
+  .dropdown-item:focus,
+  .dropdown-item:hover {
+    background-color: white !important;
+    // color: #8f4300 !important;
+    color: rgba(143, 67, 0, 0.6) !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    cursor: default;
+  }
+
+  .dropdown-item {
+    a:hover {
+      color: #8f4300 !important;
+    }
+  }
+
+  .dropdown-item {
+    color: rgba(143, 67, 0, 0.6) !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    padding: 2px 10px 2px 15px !important;
+  }
+}

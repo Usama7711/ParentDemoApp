@@ -1,0 +1,587 @@
+.mydiary_wrapper {
+  background: #ffffff;
+  box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+    0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+  border-radius: 16px;
+  //   height: calc(100vh - 100px);
+
+  .week-calendar-wrapper {
+    height: 166px;
+    background: linear-gradient(
+      180deg,
+      rgba(237, 243, 214, 0.5) 0%,
+      rgba(238, 211, 233, 0.5) 100%
+    );
+    border-radius: 20px;
+    margin: 20px;
+
+    // Custom Calendar Styling Start
+    .current-month {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #954386;
+    }
+    header {
+      display: block;
+      width: 100%;
+      padding: 1.75em 0;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--neutral-color);
+    }
+
+    header #logo {
+      font-size: 175%;
+      text-align: center;
+      color: var(--main-color);
+      line-height: 1;
+    }
+
+    header #logo .icon {
+      padding-right: 0.25em;
+    }
+
+    main {
+      display: block;
+      margin: 0 auto;
+      margin-top: 5em;
+      max-width: 50em;
+    }
+
+    /* GRID */
+
+    .row {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      // width: 100%;
+    }
+
+    .row-middle {
+      align-items: center;
+    }
+
+    .col {
+      // flex-grow: 1;
+      // flex-basis: 0;
+      // max-width: 100%;
+    }
+
+    .col-start {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .col-center {
+      justify-content: center;
+      margin-left: 1.2rem;
+      text-align: center;
+    }
+
+    .col-end {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    /* Calendar */
+
+    .calendar {
+      display: block;
+      position: relative;
+      width: 100%;
+      background: var(--neutral-color);
+      border: 1px solid var(--border-color);
+    }
+
+    .calendar .header {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 115%;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+      margin: 0 1rem 1rem;
+    }
+
+    .calendar .header .icon {
+      cursor: pointer;
+      transition: 0.15s ease-out;
+    }
+
+    .calendar .header .icon:hover {
+      /*transform: scale(1.75);*/
+      transition: 0.25s ease-out;
+      color: var(--main-color);
+    }
+
+    .calendar .header .icon:first-of-type {
+      margin-left: 1em;
+    }
+
+    .calendar .header .icon:last-of-type {
+      margin-right: 1em;
+    }
+
+    .calendar .days {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #954386;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 1.3em;
+    }
+
+    .calendar .body {
+      margin: 0 1.3em;
+    }
+    .calendar .body .cell {
+      position: relative;
+      height: 40px;
+      width: 40px;
+      // border-right: 1px solid var(--border-color);
+      overflow: hidden;
+      cursor: pointer;
+      // background: var(--neutral-color);
+      transition: 0.25s ease-out;
+      font-weight: 500;
+      border: 1px solid transparent;
+      font-size: 16px;
+    }
+
+    .calendar .body .cell:hover {
+      // background: var(--bg-color);
+      transition: 0.5s ease-out;
+      // transform:scale3d(4);
+      border: 1px solid transparent;
+    }
+
+    .calendar .body .selected {
+      // border-left: 10px solid transparent;
+      // border-image: linear-gradient(45deg, #1a8fff 0%, #53cbf1 40%);
+      // border-image-slice: 1;
+      border: 1px solid #79266a;
+      border-radius: 10px;
+    }
+    .calendar .body .today {
+      background: linear-gradient(180deg, #b23a9c 0%, #79266a 100%);
+      border-radius: 10px;
+      position: relative;
+      left: 1.2%;
+    }
+    .calendar .body .today .number {
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .calendar .body .row {
+      // border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* .calendar .body .row:last-child {
+  border-bottom: none;
+} */
+
+    .calendar .body .cell:last-child {
+      border-right: none;
+    }
+
+    .calendar .body .cell .number {
+      position: absolute;
+      // font-size: 82.5%;
+      // line-height: 1;
+      top: 0.55em;
+      right: 0.65em;
+      font-weight: 500;
+      font-size: 16px;
+      color: #1e0a1b;
+    }
+
+    .calendar .body .disabled {
+      color: var(--text-color-light);
+      pointer-events: none;
+    }
+
+    .calendar .body .cell .bg {
+      // font-weight: 700;
+      // line-height: 1;
+      // color: var(--main-color);
+      // opacity: 0;
+      // font-size: 8em;
+      // position: absolute;
+      // top: -0.2em;
+      // right: -0.05em;
+      // transition: 0.25s ease-out;
+    }
+
+    .calendar .body .cell:hover .bg,
+    .calendar .body .selected .bg {
+      opacity: 0.05;
+      transition: 0.5s ease-in;
+    }
+    .calendar .body .cell.today .bg {
+      color: #ff1a79;
+      opacity: 0.05;
+    }
+
+    .calendar .body .col {
+      // flex-grow: 0;
+      // flex-basis: calc(100% / 7);
+      // width: calc(100% / 7);
+    }
+
+    // Custom Calendar Styling End
+
+    .month-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 10px;
+      margin: 0 18px 0;
+      border-bottom: 0.5px solid rgba(30, 10, 27, 0.3);
+      .back-btn {
+        cursor: pointer;
+      }
+      .current-month {
+        p {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 0;
+          color: #954386;
+        }
+      }
+      .forward-btn {
+        cursor: pointer;
+      }
+    }
+    .week-day-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 18px 13px;
+      .day {
+        p {
+          margin-bottom: 0;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #954386;
+          cursor: pointer;
+          &:last-child {
+            color: #000;
+            margin-top: 24px;
+            span {
+              background: linear-gradient(180deg, #b23a9c 0%, #79266a 100%);
+              border-radius: 10px;
+              // margin-top: 13px;
+              color: #fff;
+              padding: 12px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .mydiary-tabs-wrapper {
+    // margin: 0 20px 20px;
+
+    .priority-red {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      color: #ff0000;
+    }
+    .priority-purple {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 15px;
+      color: #954386;
+    }
+    .mydiary-list-wrapper {
+      padding: 20px;
+      background: #f4e6ef;
+      border-radius: 20px;
+      height: calc(100vh - 410px);
+      // overflow-y: scroll;
+      margin-left: 20px;
+      width: 95%;
+      .mydiary-list {
+        height: 100%;
+        flex-direction: column;
+        overflow-y: scroll;
+
+        .mydiary-list-heading {
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #954386;
+            margin-bottom: 20px;
+            position: relative;
+            &::after {
+              content: "";
+              height: 1px;
+              width: 63%;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: rgba(30, 10, 27, 0.3);
+            }
+          }
+        }
+
+        .mydiary-single-item {
+          .msi-img-box {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            background: linear-gradient(
+              180deg,
+              rgba(237, 243, 214, 0.5) 0%,
+              rgba(238, 211, 233, 0.5) 100%
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+            }
+          }
+          .msi-text-box {
+            margin-left: 10px;
+            .mt-heading {
+              p {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #1e0a1b;
+                margin-bottom: 2px;
+              }
+            }
+            .mt-details {
+              p {
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 15px;
+                margin-bottom: 0;
+                color: rgba(30, 10, 27, 0.3);
+                &:first-child {
+                  margin-bottom: 3px;
+                }
+              }
+            }
+          }
+          .msi-icon-box {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100%;
+            img {
+            }
+          }
+        }
+        .nav-pills .nav-link,
+        .nav-pills .nav-link.active {
+          background-color: #fff;
+          border-radius: 16px;
+          margin-bottom: 10px;
+          padding: 20px;
+        }
+      }
+    }
+    .mydiary-detail-wrapper {
+      padding: 20px;
+      background: #f4e6ef;
+      border-radius: 20px;
+      width: 95%;
+      margin-left: 20px;
+      height: calc(100vh - 410px);
+
+      .md-inner-wrapper {
+        height: calc(100vh - 451px);
+        overflow-y: scroll;
+        position: relative;
+        .main-diary-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+          padding-bottom: 20px;
+          p {
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #954386;
+          }
+          span {
+            img {
+            }
+          }
+        }
+        .main-diary-details-wrapper {
+          .main-diary-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border: none;
+            margin-top: 20px;
+            p {
+              margin-bottom: 0;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: #954386;
+            }
+            span {
+              img {
+              }
+            }
+          }
+          .md-text-box {
+            p {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: #1e0a1b;
+              margin-bottom: 0;
+            }
+          }
+          .time-stamp {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            .priority-details {
+              margin-bottom: 0;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: rgba(30, 10, 27, 0.3);
+              .priority-red {
+                font-size: 14px;
+                font-weight: 500;
+              }
+            }
+            .time {
+              margin-bottom: 0;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              text-align: right;
+              color: rgba(30, 10, 27, 0.3);
+            }
+          }
+          .img-box-wrapper {
+            margin-bottom: 20px;
+            img {
+              border-radius: 20px;
+              box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+              filter: drop-shadow(0px 0px 1px rgba(12, 26, 75, 0.24));
+              margin-right: 20px;
+            }
+          }
+        }
+        .comment-box {
+          margin-top: 10px;
+          background: #ffffff;
+          box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+            0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+          border-radius: 20px;
+          padding: 20px;
+          .comment-heading {
+            p {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: #954386;
+              margin-bottom: 0;
+              position: relative;
+              &::after {
+                content: "";
+                height: 1px;
+                width: 84%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(30, 10, 27, 0.3);
+              }
+            }
+          }
+          .sub-comment {
+            margin-left: 4rem;
+          }
+          .comment,
+          .sub-comment {
+            padding: 10px 0;
+            .c-img-box {
+              img {
+              }
+            }
+            .commenting-person {
+              p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 4px;
+                color: #1e0a1b;
+              }
+            }
+            .commented {
+              p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 0;
+                color: rgba(30, 10, 27, 0.6);
+              }
+            }
+            .comment-like-btn {
+              cursor: pointer;
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+      .comment-input-field {
+        margin: 20px 0 0;
+        // position: absolute;
+        width: 100%;
+        bottom: 0;
+        .comment-form {
+          position: relative;
+          // bottom: 0;
+          .form-control {
+            background-color: transparent;
+            padding: 19.5px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            &::placeholder {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 18px;
+              color: rgba(30, 10, 27, 0.3);
+            }
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          .comment-btn {
+            position: absolute !important;
+            top: 12px;
+            right: 12px;
+          }
+        }
+      }
+    }
+  }
+}

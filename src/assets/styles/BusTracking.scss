@@ -1,0 +1,509 @@
+#Bustracking_main {
+    .BusTacking_Top_tabs {
+        margin-top: 1rem;
+
+        .p-tabview-nav-content {
+            .p-tabview-nav {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    width: 50%;
+
+                    .p-tabview-nav-link {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+            background: transparent !important;
+            color: #954386 !important;
+            font-weight: 600 !important;
+        }
+
+        .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+            background-color: #954386 !important;
+            height: 2px;
+        }
+
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+            box-shadow: none !important;
+        }
+
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            background: transparent !important;
+            border-color: transparent transparent #abc73e !important;
+            color: rgba(30, 10, 27, 0.6) !important;
+            font-weight: 400;
+        }
+
+        .p-tabview .p-tabview-panels {
+            padding: 0;
+        }
+
+        .PickUP {
+            margin-top: 20px;
+
+            .RouteSummary {
+                width: calc(66.66% - 20px);
+
+                .RouteSummary_main {
+                    padding: 20px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                    border-radius: 16px;
+
+                    .top {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #1E0A1B1A;
+
+                        .heading {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #954386;
+                        }
+
+                        .switchCase {
+                            display: flex;
+                            align-items: center;
+
+                            .form-switch {
+                                padding-left: 3rem;
+
+                                input {
+                                    padding: 0 15px;
+                                }
+                            }
+
+                            .form-check-input:checked {
+                                border-color: #954386 !important;
+                                background-color: #954386;
+                                background-image: url(../images/activeWsitch.svg);
+                            }
+
+                            .form-check-input {
+                                border: 1px solid #954386;
+                                background-image: url(../images/Switch_IMg.svg);
+                            }
+
+                            .list_view {
+                                font-size: 12px;
+                                font-weight: 400;
+                                color: #1E0A1B99;
+                            }
+
+                            .active {
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: #954386;
+                            }
+
+                            .form-check-input:focus {
+                                outline: none;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    .RouteSummary_body {
+                        .top_body {
+                            display: flex;
+                            align-items: center;
+                            justify-content: end;
+                            margin-top: 20px;
+
+                            p {
+                                margin: 0;
+                                padding: 0;
+                                font-size: 12px;
+                                font-weight: 400;
+                                color: #1E0A1B99;
+                            }
+
+                            img {
+                                margin: 0 15px;
+                            }
+                        }
+
+                        .Track_Body {
+                            margin-top: 20px;
+
+                            .Track_Head {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 18px 20px;
+                                background: rgba(254, 249, 251, 0.65);
+                                border: 1px solid #FFFFFF;
+                                box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                                border-radius: 16px;
+
+                                .shadule_heading,
+                                .busStop {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: #954386;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                            }
+
+                            .Step_wise_Route {
+                                display: flex;
+                                justify-content: space-between;
+                                margin: 15px 0;
+
+                                .Timeing {
+                                    margin-left: 40px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    text-align: center;
+
+                                    .time_slot {
+                                        margin-bottom: 10px;
+                                        text-align: center;
+
+                                        .startPoint,
+                                        .EndPoit {
+                                            font-size: 18px;
+                                            font-weight: 800;
+                                            color: #954386;
+                                            margin: 0;
+                                        }
+
+                                        .start {
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            color: #954386;
+                                            margin: 0;
+                                        }
+
+                                        .end {
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            color: #ABC73E;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+
+                                .Route {
+                                    display: flex;
+                                    position: relative;
+                                    padding: 20px 0;
+
+                                    .Route_path {
+                                        position: relative;
+                                        left: 50%;
+                                        border-left: 3px solid #ABC73E;
+                                        z-index: 1;
+                                        margin: 15px 0;
+                                    }
+
+                                    .step_main {
+                                        display: flex;
+                                        align-items: center;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+
+                                        div {
+                                            z-index: 2;
+                                            padding: 7px 0;
+                                            background-color: #ffff;
+
+                                            img {
+                                                box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                                                border-radius: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .BusLogo {
+                                    position: absolute;
+                                    top: 110px;
+                                    right: 25px;
+                                }
+
+                                .DropBusLogo {
+                                    top: 60px;
+                                    right: 15px;
+                                }
+
+                                .Station {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+
+                                    .single_stop {
+                                        margin: 15px 0;
+                                        position: relative;
+                                        background: rgba(254, 249, 251, 0.65);
+                                        border: 2px solid #FFFFFF;
+                                        box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                                        border-radius: 20px;
+                                        padding: 13px 20px;
+
+                                        &:first-child {
+                                            margin-top: 0;
+                                        }
+
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+
+                                        .arrow_left {
+                                            position: absolute;
+                                            left: -10px;
+                                            top: 45%;
+                                        }
+
+                                        .logo {
+                                            margin-right: 20px;
+                                        }
+
+                                        .statio_Name {
+                                            display: flex;
+                                            align-items: center;
+
+                                            p {
+                                                width: 380px;
+                                                margin: 0;
+                                                padding: 0;
+                                                font-size: 18px;
+                                                font-weight: 600;
+                                                color: #954386;
+                                            }
+                                        }
+
+                                    }
+
+                                    .active {
+                                        background-color: #ABC73E;
+
+                                        .statio_Name {
+                                            p {
+                                                color: white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Mapsection {
+                .RouteSummary_main {
+                    padding: 20px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                    border-radius: 16px;
+
+                    .top {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #1E0A1B1A;
+
+                        .heading {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #954386;
+                        }
+
+
+                    }
+                }
+            }
+
+            .pickUo_Details {
+                .TripDetails {
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                    border-radius: 16px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+
+                    .heading {
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #1E0A1B1A;
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #954386;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+
+                    .Details {
+                        margin-top: 10px;
+
+                        div {
+                            label {
+                                font-size: 12px;
+                                font-weight: 500;
+                                color: #1E0A1B4D;
+                            }
+
+                            p {
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: #1E0A1B;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                .StaffDetails {
+                    background: #FFFFFF;
+                    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24), 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+                    border-radius: 16px;
+                    padding: 20px;
+
+                    .heading {
+                        margin-bottom: 10px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #1E0A1B1A;
+
+                        p {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #954386;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+
+                    .Calling_card_single {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        .left_card {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                margin-right: 20px;
+                            }
+
+                            .Name {
+                                label {
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    color: #1E0A1B4D;
+                                }
+
+                                p {
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                    color: #1E0A1B;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.switchCase {
+    display: flex;
+    align-items: center;
+
+    .form-switch {
+        padding-left: 3rem;
+
+        input {
+            padding: 0 15px;
+        }
+    }
+
+    .form-check-input:checked {
+        border-color: #954386 !important;
+        background-color: #954386;
+        background-image: url(../images/activeWsitch.svg) !important;
+    }
+
+    .form-check-input {
+        border: 1px solid #954386 !important;
+        background-image: url(../images/Switch_IMg.svg) !important;
+    }
+
+    .list_view {
+        font-size: 12px;
+        font-weight: 400;
+        color: #1E0A1B99;
+    }
+
+    .active {
+        font-size: 12px;
+        font-weight: 600;
+        color: #954386;
+    }
+
+    .form-check-input:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+#RenewTransportation {
+    .renewTransport_main {
+        .Renew_Card {
+            padding: 20px;
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+
+                img {
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 5px;
+                }
+            }
+
+            .bottom {
+                .name {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #27272E;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+
+                .label {
+                    font-size: 10px;
+                    font-weight: 400;
+                    color: #1E0A1B4D;
+                    margin: 0;
+                    margin-bottom: 5px;
+                    
+                    span {
+                        margin-left: 15px;
+                        color: #1E0A1B;
+                    }
+                }
+            }
+        }
+    }
+}

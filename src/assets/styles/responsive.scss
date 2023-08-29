@@ -1,0 +1,348 @@
+@media all and (max-width: 1200px) {
+  #dashboard_main .top_section_1 .top_right .common_tabs .p-tabview-panels{
+    padding: 0;
+  }
+  #dashboard_main .top_section_2 .Assignments .tabel-main-wrpper table{
+    min-width: 800px;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom .Carousel .single_kide{
+    padding: 0 !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom .Carousel .single_kide .photo a{
+    position: unset !important;
+  }
+  #dashboard_main .top_section_2 .NoticeBoard{
+    margin-top: 20px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing{
+    margin-left: 0 !important;
+  }
+  #TransactionsFlexy .searchPanel{
+    margin-bottom: 10px;
+    width:50% !important;
+  }
+  #TransactionsFlexy .subBtn{
+    width: 50% !important;
+  }
+}
+@media all and (max-width: 991px) {
+  #dashboard_main .top_section_1 .top_left .top_left_up .text .heading{
+    display: flex;
+    flex-direction: column;
+    .par-name{
+      display: block;
+    }
+  }
+  #RenewTransportation .renewTransport_main .Renew_Card{
+    margin-bottom: 20px;
+  }
+  
+  .RouteSummary.col-lg-8{
+    margin-bottom: 20px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot{
+    width: 75px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main{
+    padding: 15px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station .single_stop .logo{
+    margin-right: 10px !important;
+    img{
+      height: 40px;
+    width: 40px;
+    }
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station .single_stop .statio_Name p{
+    font-size: 12px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .startPoint, #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .EndPoit{
+    font-size: 14px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station .single_stop{
+    padding: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing{
+    margin-left: 0 !important;
+  }
+}
+@media all and (max-width: 768px) {
+  #dashboard_main .top_section_1 .top_right .react-calendar .react-calendar__month-view .react-calendar__month-view__days .react-calendar__tile{
+    font-size: 10px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .react-calendar .react-calendar__month-view .react-calendar__month-view__weekdays{
+    font-size: 10px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .react-calendar .react-calendar__navigation .react-calendar__navigation__prev-button, #dashboard_main .top_section_1 .top_right .react-calendar .react-calendar__navigation .react-calendar__navigation__arrow{
+    width: 30px !important;
+    font-size: 15px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom .Carousel .carousel-control-next .carousel-control-next-icon{
+    top: 12px !important;
+    right: 15px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom .Carousel .carousel-control-prev .carousel-control-prev-icon{
+    top: 12px !important;
+    right: 45px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom .My_kids p{
+    font-size: 14px !important;
+  }
+  #dashboard_main .top_section_1 .top_right{
+    padding: 15px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_bottom{
+    padding: 10px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_up .text{
+    margin-left: 0 !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_up{
+    padding: 15px;
+    height: auto !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_up .text .heading{
+    font-size: 18px !important;
+  }
+  #TransactionsFlexy .searchPanel{
+    width:100% !important;
+  }
+  #TransactionsFlexy .subBtn{
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .Mapsection .RouteSummary_main{
+    padding: 15px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .Mapsection .RouteSummary_main .top .heading{
+    margin-bottom: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .Mapsection .RouteSummary_main .top{
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .top{
+    padding-bottom: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .top .heading{
+    margin-bottom: 10px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .top{
+    flex-direction: column !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main{
+    padding: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing{
+    margin-top: 28px;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .BusLogo{
+    right: 20px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station{
+    margin-left: 14px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing{
+    margin-right: 0 !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot{
+    width: 65px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route{
+    justify-content: flex-start !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Route{
+    padding: 32px 0 !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot{
+    text-align: start !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing{
+    align-items: flex-start !important;
+    text-align: start !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .end{
+    font-size: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .startPoint, #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .EndPoit{
+    font-size: 12px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Timeing .time_slot .start{
+    font-size: 10px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Route .step_main div{
+    img{
+      height: 20px;
+      width: 20px;
+    }
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station .single_stop .statio_Name{
+    flex-direction: column;
+  }
+  .change_password .mainLandingCard{
+    padding: 15px !important;
+  }
+  .change_password, .edit_details{
+    .belowBtns{
+      margin-left: 0 !important;
+      flex-direction: column;
+      .cx-btn-2{
+        width: 100%;
+      }
+      .cx-btn-1{
+  width: 100%;
+  margin-left: 0 !important;
+  margin-top: 10px;
+      }
+    }
+  } 
+  .personal_details .mainLandingCard .profileCard .userCard .UserName{
+    left: 95px !important;
+  }
+  .personal_details .mainLandingCard .profileCard .userCard {
+    width: 100% !important;
+  }
+  .personal_details .mainLandingCard .profileCard .userCard .userImg{
+    top: -3px !important;
+    height: 70px !important;
+    width: 70px !important;
+  }
+  
+  .personal_details .mainLandingCard .profileCard{
+    padding: 10px !important;
+  }
+  .cx-main-card{
+    padding: 15px !important;
+  }
+  .personal_details .mainLandingCard {
+padding: 15px !important;
+  }
+  #ForgotPassword .auth-wrapper .login-wrapper .auth-card .auth-btns .login-register-btn{
+width: 100%;
+margin-bottom: 15px;
+  }
+  .header-u-name {
+    display: none;
+  }
+  .cx-sidebar .menus-wrapper {
+    margin-top: 10px !important;
+  }
+  .main-header {
+    margin-left: 60px !important;
+  }
+  .cx-active-sidebar {
+    width: 60px !important;
+    .menu-outer-warpper .menu-name {
+      display: none;
+    }
+    .accordion .accordion-item button::after {
+      display: none;
+    }
+    .sub-menus {
+      display: none;
+    }
+
+    .sidebar-button {
+      padding-right: 13px !important;
+    }
+    .accordion-body {
+      margin-top: unset !important;
+      padding: unset !important;
+    }
+    .logout {
+      width: 50px !important;
+    }
+    .brand-logo {
+      padding: unset !important;
+    }
+  }
+
+  .sidebar-button {
+    margin-top: 15px;
+    padding-right: 20px;
+    text-align: end;
+    display: block !important;
+    button {
+      border: none;
+      background-color: transparent;
+    }
+
+    .img-arrow-active {
+      transform: rotate(180deg);
+      transition: all 0.3s ease;
+    }
+  }
+  .cx-main-card {
+    margin-left: 60px !important;
+  }
+  .cx-sidebar .cx-sidebar-wrapper {
+    background: linear-gradient(180deg, #edf3d6 0%, #eed3e9 100%);
+  }
+}
+@media all and (max-width: 576px) {
+}
+@media all and (max-width: 480px) {
+  #dashboard_main .top_section_1 .top_right .common_tabs .p-tabview-nav li a span{
+    font-size: 12px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .react-calendar .react-calendar__navigation .react-calendar__navigation__label__labelText{
+    font-size: 16px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .common_tabs .overFlow_X .singleUpComingMeeting .right{
+    height: 20px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .common_tabs .overFlow_X .singleUpComingMeeting .right .Completed, .InProgress, .YettoStart{
+    font-size: 9px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .common_tabs .overFlow_X .singleUpComingMeeting{
+    margin-bottom: 10px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .common_tabs .overFlow_X .singleUpComingMeeting .left img{
+    height: 28px !important;
+    width: 28px !important;
+  }
+  #dashboard_main .top_section_1 .top_right .common_tabs .overFlow_X .singleUpComingMeeting .left .subject p{
+    font-size: 11px !important;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_up{
+    flex-direction: column;
+  }
+  #dashboard_main .top_section_1 .top_left .top_left_up .text{
+    margin-left: 0 !important;
+    margin: 15px 0;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .top_body p{
+    font-size: 11px !important;
+  }
+  #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Route{
+    padding: 40px 0 !important;
+  }
+  .personal_details .mainLandingCard .innerHeading{
+    .mainLink{
+      display: inline-block;
+      width: 100%;
+      .cx-btn-1{
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 360px) {
+}
+
+@media all and (min-width: 768px) {
+
+  
+    .left .dropdown .dropdown-menu.show,
+  .main-header .header-wrapper .d-item .dropdown .dropdown-menu.show,
+  .main-header .header-wrapper .profile .dropdown .dropdown-menu.show {
+    inset: 5px auto auto -150px !important;
+  }
+
+  .main-header .header-wrapper #profile .dropdown .dropdown-menu.show{
+    inset: 5px auto auto -170px !important;
+
+  }
+}

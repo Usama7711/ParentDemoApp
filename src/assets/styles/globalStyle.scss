@@ -1,0 +1,728 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+#cx-main {
+  transition: all 0.5s;
+  background: linear-gradient(180deg, #edf3d6 0%, #eed3e9 100%);
+  // min-height: calc(100vh - 60px);
+  // background-image: url(../images/images/general/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cx-main-card {
+  margin-left: 230px;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  border-radius: 15px 0 0 0;
+  transition: all 0.5s ease;
+  background: #fcfcfb;
+}
+
+#cx-wrapper {
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+// ||===========================> BUTTONS  <==============================||
+
+.cx-btn-1 {
+  cursor: pointer;
+  background: #abc73e;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 10px;
+  // padding: 0px 1px;
+  width: 140px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.cx-btn-2 {
+  background: transparent;
+  border: 1px solid #abc73e;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #abc73e;
+  border-radius: 10px;
+  // padding: 7px 20px;
+  width: 138px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover {
+    color: #abc73e;
+  }
+}
+
+.cx-btn-3 {
+  cursor: pointer;
+  background-color: #ff0000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  &:hover {}
+}
+
+// ||===========================> INPUTS <==============================||
+
+.cx-input-1 {
+  font-size: 14px;
+  line-height: 2.5 !important;
+  height: 38px;
+  border: 0.956px solid #53b7e8 !important;
+  border-radius: 5px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+
+  &::placeholder {
+    color: gray !important;
+    font-size: 14px;
+  }
+}
+
+.cx-input-2 {
+  font-size: 14px;
+  line-height: 2.5 !important;
+  height: 38px;
+  border: 0.956px solid #53b7e8 !important;
+  border-radius: 5px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+
+  &::placeholder {
+    color: gray !important;
+    font-size: 14px;
+  }
+}
+
+.cx-input-radio {
+  font-size: 14px;
+  line-height: 2.5 !important;
+  border-radius: 5px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+
+  &::placeholder {
+    color: gray !important;
+    font-size: 14px;
+  }
+}
+
+.cx-input-check {
+  font-size: 14px;
+  line-height: 2.5 !important;
+  height: 38px;
+  border-radius: 5px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+
+  &::placeholder {
+    color: gray !important;
+    font-size: 14px;
+  }
+}
+
+// ||===========================> HEADINGS <==============================||
+.cx-heading-1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #954386;
+}
+
+.cx-heading-2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #954386;
+}
+
+.cx-heading-3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(209, 38, 38, 0.8);
+}
+
+.cx-label-1 {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.cx-label-2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.cx-key {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  font-feature-settings: "salt" on;
+  color: rgba(30, 10, 27, 0.3);
+}
+
+.cx-value {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  font-feature-settings: "salt" on;
+  color: #1e0a1b;
+}
+
+// ||===========================> BORDERS <==============================||
+
+.cx-bt {
+  border-top: 1px solid #ddeaf3;
+}
+
+.cx-bb {
+  border-bottom: 1px solid #ddeaf3;
+}
+
+.cx-br {
+  border-right: 1px solid #ddeaf3;
+}
+
+.cx-bl {
+  border-left: 1px solid #ddeaf3;
+}
+
+.cx-b {
+  border: 1px solid #ddeaf3;
+}
+
+// ||===========================> CARDS & BOXES <==============================||
+
+.cx-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 0.956px solid rgba(135, 135, 135, 0.1);
+  box-shadow: 4px 4px 10px rgba(182, 182, 182, 0.1);
+}
+
+.cx-card-round {
+  background: #ffffff;
+  border: 0.956px solid rgba(135, 135, 135, 0.1);
+  box-shadow: 4px 4px 10px rgba(182, 182, 182, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.cx-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.cx-circle-5 {
+  border-radius: 5px;
+}
+
+.cx-circle-10 {
+  border-radius: 10px;
+}
+
+.cx-circle-20 {
+  border-radius: 20px;
+}
+
+.cx-circle-15 {
+  border-radius: 15px;
+}
+
+// ||===========================> UNITS <==============================||
+
+.cx-vh100 {
+  height: 100vh;
+}
+
+.cx-vw100 {
+  width: 100%;
+}
+
+// ----MARGIN----
+.cx-m-0 {
+  margin: 0;
+}
+
+.cx-m-5 {
+  margin: 5px;
+}
+
+.cx-m-10 {
+  margin: 10px;
+}
+
+.cx-m-15 {
+  margin: 15px;
+}
+
+.cx-m-20 {
+  margin: 20px;
+}
+
+.cx-m-30 {
+  margin: 30px;
+}
+
+.cx-m-40 {
+  margin: 40px;
+}
+
+.cx-m-50 {
+  margin: 50px;
+}
+
+// ---------MARGIN TOP --------
+
+.cx-mt-0 {
+  margin-top: 0;
+}
+
+.cx-mt-5 {
+  margin-top: 5px;
+}
+
+.cx-mt-10 {
+  margin-top: 10px;
+}
+
+.cx-mt-15 {
+  margin-top: 15px;
+}
+
+.cx-mt-20 {
+  margin-top: 20px;
+}
+
+.cx-mt-25 {
+  margin-top: 25px;
+}
+
+.cx-mt-30 {
+  margin-top: 30px;
+}
+
+.cx-mt-35 {
+  margin-top: 35px;
+}
+
+.cx-mt-40 {
+  margin-top: 40px;
+}
+
+.cx-mt-50 {
+  margin-top: 50px;
+}
+
+.cx-mt-60 {
+  margin-top: 60px;
+}
+
+.cx-mt-70 {
+  margin-top: 70px;
+}
+
+.cx-mt-80 {
+  margin-top: 80px;
+}
+
+.cx-mt-90 {
+  margin-top: 90px;
+}
+
+.cx-mt-100 {
+  margin-top: 100px;
+}
+
+// -----------MARGIN BOTTOM----------
+
+.cx-mb-0 {
+  margin-bottom: 0;
+}
+
+.cx-mb-5 {
+  margin-bottom: 5px;
+}
+
+.cx-mb-10 {
+  margin-bottom: 10px;
+}
+
+.cx-mb-15 {
+  margin-bottom: 15px;
+}
+
+.cx-mb-20 {
+  margin-bottom: 20px;
+}
+
+.cx-mb-25 {
+  margin-bottom: 25px;
+}
+
+.cx-mb-30 {
+  margin-bottom: 30px;
+}
+
+.cx-mb-35 {
+  margin-bottom: 35px;
+}
+
+.cx-mb-40 {
+  margin-bottom: 40px;
+}
+
+.cx-mb-50 {
+  margin-bottom: 50px;
+}
+
+.cx-mb-60 {
+  margin-bottom: 60px;
+}
+
+.cx-mb-70 {
+  margin-bottom: 70px;
+}
+
+.cx-mb-80 {
+  margin-bottom: 80px;
+}
+
+.cx-mb-90 {
+  margin-bottom: 90px;
+}
+
+.cx-mb-100 {
+  margin-bottom: 100px;
+}
+
+// --------  MARGIN LEFT ---------
+.cx-ml-0 {
+  margin-left: 0px;
+}
+
+.cx-ml-5 {
+  margin-left: 5px;
+}
+
+.cx-ml-10 {
+  margin-left: 10px;
+}
+
+.cx-ml-15 {
+  margin-left: 15px;
+}
+
+.cx-ml-20 {
+  margin-left: 20px;
+}
+
+.cx-ml-25 {
+  margin-left: 25px;
+}
+
+.cx-ml-30 {
+  margin-left: 0px;
+}
+
+.cx-ml-40 {
+  margin-left: 40px;
+}
+
+// --------  MARGIN RIGHT ---------
+.cx-mr-0 {
+  margin-right: 0px;
+}
+
+.cx-mr-5 {
+  margin-right: 5px;
+}
+
+// ||===========================> SCROLLS <==============================||
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  height: 5px;
+  width: 2px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #954386;
+}
+
+// ------------- Flex ------------
+.cx-flex-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cx-flex-x {
+  justify-content: center;
+}
+
+.cx-flex-y {
+  align-items: center;
+}
+
+// -------------- Position ----------------
+
+.cx-p-r {
+  position: relative;
+}
+
+.cx-p-a {
+  position: absolute;
+}
+
+.cx-p-f {
+  position: fixed;
+}
+
+.cx-p-s {
+  position: sticky;
+}
+
+.cx-p-center {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// ||===========================> COLORS <==============================||
+body {
+  --backColorMainLightMode: #beddda;
+  --backColorMainDarksecond: #ddeaf3;
+  --gray_05_LightMode: rgba(17, 17, 17, 0.5);
+  --gray_08_LightMode: rgba(17, 17, 17, 0.8);
+  --gray_03_LightMode: rgba(17, 17, 17, 0.3);
+  --gray_02_LightMode: rgba(17, 17, 17, 0.2);
+  --gray_455A64_LightMode: #455a64;
+  --gray_666666_LightMode: #666666;
+  --gray_81888C_LightMode: #ddeaf3;
+  --green_06685E_LightMode: #06685e;
+  --green_3DA298_LightMode: #3da298;
+  --greenLight_3DA298_LightMode: rgba(61, 162, 152, 0.1);
+  --greenLight_3DA298_02_LightMode: rgba(61, 162, 152, 0.2);
+
+  --green_009253_LightMode: #009253;
+
+  --blueBorderColor_53B7E8_LightMode: #53b7e8;
+  --greenBorderColor_3DA298_LightMode: #3da298;
+
+  --blue_53B7E8_LightMode: #53b7e8;
+  --blueLight_53B7E8_LightMode: rgba(83, 183, 232, 0.1);
+
+  --blue_deeplight_EEF8FD: #eef8fd;
+
+  --red_EE1D52_LightMode: #ee1d52;
+
+  --black_111111_LightMode: #111111;
+  --black_232122_LightMode: #232122;
+  --black_000000_LightMode: #000000;
+
+  --black_333333_LightMode: #333333;
+
+  --white_FFFFFF_LightMode: #ffffff;
+  --white_FFFBFB_LightMode: #fffbfb;
+}
+
+// --------- Table row round ---------------
+.cx-tr-round {
+  tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  tr:first-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+  tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  tr:first-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+}
+
+// ------- Cursor -----------
+.cx-pionter {
+  cursor: pointer;
+}
+
+// Green Radio
+.form-check {
+  .form-check-input {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+  }
+
+  .form-check-input:checked[type='radio'] {
+    background-image: url("../images/roundRadio.svg") !important;
+    background-size: 15px !important;
+    border: #abc73e !important;
+  }
+
+  .form-check-input:checked {
+    background-color: #fff !important;
+    border: none !important;
+  }
+
+  .form-check-input:focus {
+    box-shadow: none !important;
+  }
+
+  .form-check-input~.form-check-label {
+    color: rgba(30, 10, 27, 0.3) !important;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .form-check-input:checked~.form-check-label {
+    color: #abc73e !important;
+    font-size: 13px;
+  }
+
+  .form-check-input {
+    border-color: rgba(30, 10, 27, 0.3) !important;
+  }
+}
+
+// .form-select
+.form-select {
+  background-image: url("../images/selectIcon.svg") !important;
+  background-size: 12px !important;
+}
+
+// React Bootstrap Modal customiz Styles
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-body {
+  .borderModalBelow {
+    border: 0.5px solid rgba(30, 10, 27, 0.1);
+    margin-top: 20px;
+  }
+
+  .borderModal {
+    border: 0.5px solid rgba(30, 10, 27, 0.1);
+    margin-bottom: 20px;
+  }
+
+  padding: 0px 15px !important;
+
+  p {
+    font-size: 16px !important;
+    color: rgba(30, 10, 27, 0.6);
+  }
+}
+
+.modal-title {
+  color: #954386;
+  font-size: 16px !important;
+}
+
+.modal-footer {
+  border-top: none !important;
+
+  .modalBtns {
+    display: flex;
+    justify-content: flex-end;
+
+    .cancelBtn {
+      border: 1px solid #954386;
+      border-radius: 10px;
+      color: #954386;
+      background-color: #fff;
+      width: 100px;
+      height: 35px;
+    }
+
+    .YesBtn {
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      background-color: #954386;
+      width: 100px;
+      height: 35px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.PayaLink {
+  text-decoration: none !important;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: none !important;
+}
+
+.belowBtns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.p-tabview-nav-content {
+  margin-bottom: 20px;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  // border-width: 0px 0px 1px 0px !important;
+}

@@ -1,0 +1,59 @@
+@media all and (max-width:1370px) {
+    #VideoConference .single_Video .Participant .members {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        .people_img {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media all and (max-width:1180px) {
+    #AuthoriswPersone .activity-table-wrapper {
+        overflow-x: auto !important;
+
+        table {
+            width: 890px !important;
+        }
+    }
+}
+
+@media all and (max-width:576px) {
+    #VideoConference .single_Video .Participant .members {
+        flex-direction: row !important;
+        align-items: center !important;
+
+        .people_img {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media all and (max-width:350px) {
+    #VideoConference .single_Video .Participant .members {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        .people_img {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media all and (max-width:991px) {
+    #Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary {
+        width: 100% !important;
+    }
+}
+
+@media all and (max-width:768px) {
+    .left-chat-section {
+        margin-bottom: 20px;
+    }
+
+}
+
+#Bustracking_main .BusTacking_Top_tabs .PickUP .RouteSummary .RouteSummary_main .RouteSummary_body .Track_Body .Step_wise_Route .Station .single_stop .statio_Name p {
+    width: 80% !important;
+}

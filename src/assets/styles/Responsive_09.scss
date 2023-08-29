@@ -1,0 +1,304 @@
+// Media Break points start Max-1440px
+@media all and (max-width : 1440px) {}
+
+@media all and (max-width : 1200px) {
+    .my_kids {
+        .myKidsRow .col3Customize {
+            width: 33% !important;
+        }
+
+        .myRegistrationRow .col3Customize {
+            width: 33% !important;
+        }
+    }
+
+    // fees
+    .Fees {
+        .FeeReceipts {
+            .searchPanel {
+                width: 49% !important;
+                margin-bottom: 15px;
+
+                .form-control {
+                    width: 100% !important;
+                }
+            }
+
+            .subBtn {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width : 1080px) {
+    .my_kids {
+        .myKidsRow .col3Customize {
+            width: 50% !important;
+        }
+
+        .myRegistrationRow .col3Customize {
+            width: 50% !important;
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    .edit_details {
+        .middleTransporter {
+            flex-direction: column;
+
+            .leftSideCOnt {
+                width: 100% !important;
+            }
+
+            .rightSideCOnt {
+                width: 100% !important;
+            }
+        }
+    }
+
+    // Cashless_Wallet tabs file
+    .Cashless_Wallet {
+        .smallScrNone {
+            display: none !important;
+        }
+
+        #tabsCashless .p-tabview .p-tabview-nav {
+            // flex-direction: column !important;
+            flex-wrap: wrap !important;
+        }
+
+        #tabsCashless .p-tabview .p-tabview-nav li {
+            width: 49.5% !important;
+        }
+
+        #tabsCashless .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+            background-color: transparent !important;
+        }
+
+        #tabsCashless .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+            border-bottom: 2.5px solid #954386 !important;
+        }
+
+        #tabsCashless .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            padding: 1.25rem !important;
+        }
+    }
+
+    // Rechareg file 
+    .Recharge_Wallet {
+        .footertxt {
+            margin-bottom: 1rem;
+        }
+
+        .textLeftMedia {
+            text-align: unset !important;
+        }
+
+    }
+
+    // Fees file
+    .Fees {
+        #innerSlideTab .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            padding: 1.25rem !important;
+        }
+
+        .feesCard .nav-tabs {
+            flex-direction: column !important;
+
+            .nav-item {
+                margin-bottom: 15px !important;
+                margin-right: 0px !important;
+            }
+        }
+
+        .successPanel {
+            .searchPanel .form-control {
+                width: 100% !important;
+                margin-bottom: 15px;
+            }
+        }
+
+        .failedPanel {
+            .searchPanel .form-control {
+                width: 100% !important;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // my kids file (Administrastion)
+    .my_kids {
+        .myKidsRow .col3Customize {
+            width: 100% !important;
+        }
+
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            padding: 1.25rem !important;
+        }
+
+        .myRegistrationRow .col3Customize {
+            width: 100% !important;
+        }
+    }
+
+    // New_registration
+    .New_registration {
+        .registrationRow .ResponsiveNone {
+            display: none !important;
+        }
+    }
+
+    // viewKids_details
+    .viewKids_details {
+        .userCard {
+            width: 100% !important;
+        }
+    }
+}
+
+@media all and (max-width: 535px) {
+    .Fees {
+
+        .allPanel,
+        .pendingPanel,
+        .partialPanel,
+        .allTrancPanel,
+        .pendingPanel,
+        .successPanel,
+        .failedPanel {
+            .searchPanel {
+                width: 100% !important;
+
+                .form-control {
+                    width: 100% !important;
+                    margin-bottom: 20px !important;
+                }
+            }
+
+            .subBtn {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+
+                .cx-btn-1 {
+                    width: 100% !important;
+                }
+            }
+        }
+
+        #TransactionsFlexy .p-tabview .p-tabview-nav li {
+            width: 100% !important;
+        }
+
+        .p-tabview-nav {
+            flex-direction: column !important;
+        }
+
+        .p-tabview-nav li {
+            width: 100% !important;
+        }
+
+        .p-tabview-ink-bar {
+            background-color: transparent !important;
+        }
+
+        .feesCard #innerSlideTab .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link,
+        .feesCard #TransactionsFlexy .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+            border-bottom: 2px solid #954386 !important;
+        }
+
+        .Fees .feesCard #TransactionsFlexy .p-tabview .p-tabview-nav .p-tabview-ink-bar {
+            border-color: transparent !important;
+        }
+
+        // Fee Receipt styles
+        .FeeReceipts {
+            .searchPanel {
+                width: 100% !important;
+                // .form-control {
+                //     width: 100% !important;
+                // }
+            }
+
+            .subBtn {
+                // margin-bottom: 15px;
+                width: 100% !important;
+
+                .cx-btn-1 {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:480px) {
+    .Cashless_Wallet {
+        .headerForms .leftSide .subBtn {
+            width: 100% !important;
+        }
+
+        .insideRight {
+            width: 100% !important;
+
+            .cx-btn-1 {
+                width: 100% !important;
+            }
+        }
+    }
+
+    // New_registration
+    .New_registration {
+        .belowBtns {
+            flex-direction: column;
+            margin-left: 0rem !important;
+
+            .cx-btn-2,
+            .cx-btn-1 {
+                width: 100%;
+                margin: 0.5rem 0rem;
+            }
+        }
+    }
+
+    // viewKids_details
+    .viewKids_details {
+        .userCard .UserName {
+            top: 80px !important;
+            left: 12px !important;
+        }
+    }
+
+    // Rechareg file 
+    .Recharge_Wallet {
+        .belowBtns {
+            flex-direction: column !important;
+
+            .cx-btn-2 {
+                width: 100% !important;
+                margin: 0.5rem 0rem !important;
+            }
+
+            .cx-btn-1 {
+                width: 100% !important;
+                margin: 0.5rem 0rem !important;
+            }
+        }
+    }
+
+    // Edit_KidsDetails
+    .Edit_KidsDetails,
+    .Edit_Registration {
+        .belowBtns {
+            flex-direction: column !important;
+            margin-left: 0rem !important;
+
+            .cx-btn-2,
+            .cx-btn-1 {
+                width: 100% !important;
+                margin: 0.5rem 0rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,540 @@
+@media all and (max-width: 1920px) {
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -2.7%;
+  }
+  .Topic_main .topic-main-wrapper .custom-body::before {
+    height: calc(100% - 75px);
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -6%;
+    top: -70px;
+  }
+  .Topic_main .topic-main-wrapper .custom-header::before{
+    left: -4.7%;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -6.3%;
+    // width: 10%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -6.3%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-body2::before {
+    left: -7%;
+    width: 15px;
+  }
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -7%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -13.6%;
+    width: 88px;
+  }
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -8%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -13.5%;
+    width: 20%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-body2::before {
+    left: -15%;
+    width: 15px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .topic-accordion-wrapper .accordion-body {
+    padding: 20px 0 20px 75px;
+  }
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -6%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -5.5%;
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -3.8%;
+  }
+  .topic-accordion-wrapper .tch-left .ad-heading {
+    font-size: 14px;
+  }
+  .topic-accordion-wrapper .accordion-body {
+    padding: 20px 0 20px 45px;
+  }
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -3.8%;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -3.5%;
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .topic-accordion-wrapper .sub-topic-wrapper .sub-topic-item .sub-topic {
+    width: 80%;
+  }
+  .topic-accordion-wrapper .accordion-body {
+    padding: 20px 0 20px 58px;
+  }
+  .tch-left {
+    img {
+      width: 100%;
+    }
+  }
+  .topic-accordion-wrapper .tch-right .CircularProgressbar {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -5.6%;
+    top: -82px;
+    height: 161%;
+  }
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -3.5%;
+  }
+  .Topic_main .topic-main-wrapper .custom-body::before {
+    height: calc(100% - 87px);
+  }
+  .topic-accordion-wrapper .tch-left .topic-list {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+  .topic-accordion-wrapper .tch-left .ad-heading {
+    font-size: 13px;
+  }
+  .topic-accordion-wrapper
+    .sub-topic-wrapper
+    .sub-topic-item
+    .sub-topic
+    .st-right
+    p {
+    font-size: 14px;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -3.8%;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .topic-accordion-wrapper .sub-topic-wrapper .sub-topic-item .sub-topic {
+    width: 80%;
+  }
+  .topic-accordion-wrapper .accordion-body {
+    padding: 20px 0 20px 34px;
+  }
+  .tch-left {
+    img {
+      width: 110%;
+      margin-bottom: 1rem;
+    }
+  }
+  .topic-accordion-wrapper .tch-right .CircularProgressbar {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+  }
+  .Topic_main .topic-main-wrapper .custom-body2::before {
+    left: -7.6%;
+    top: -63px;
+    height: 161%;
+  }
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    left: -5.5%;
+  }
+  .Topic_main .topic-main-wrapper .custom-body::before {
+    height: calc(100% - 52px);
+  }
+  .topic-accordion-wrapper .tch-left .topic-list {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+  .topic-accordion-wrapper .tch-left .ad-heading {
+    font-size: 13px;
+  }
+  .topic-accordion-wrapper
+    .sub-topic-wrapper
+    .sub-topic-item
+    .sub-topic
+    .st-right
+    p {
+    font-size: 14px;
+  }
+  .AboutCourseDetails
+    .course-topic-details-wrapper
+    .course-topic-details
+    .ct-img {
+    width: 50%;
+  }
+  .AboutCourseDetails
+    .course-topic-details-wrapper
+    .course-topic-details
+    .cl-text-box {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .course-topic-details {
+    padding: 15px;
+  }
+  .AboutCourseDetails
+    .course-topic-details-wrapper
+    .course-topic-details
+    .smd-btn-wrapper {
+    align-items: flex-start;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .AboutCourseDetails
+    .course-topic-details-wrapper
+    .course-topic-details
+    .smd-btn-wrapper
+    .cx-mb-20 {
+    margin-bottom: 0;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-body::before {
+    height: calc(100% - 82px);
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-body2::before {
+    left: -20px;
+    top: -62px;
+  }
+  .AboutCourseDetails .course-topic-details-wrapper .custom-header::before {
+    left: -4.8%;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .green-btn-1 {
+    padding: 5px 8px;
+    font-size: 10px;
+    text-align: center;
+    // height: 35px;
+    width: 112px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .Attendance_calender .breadcrumb-wrapper .breadcrumb p {
+    font-size: 13px;
+  }
+  .rbc-toolbar button {
+    font-size: 7px;
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .calendar
+    .rbc-toolbar
+    .rbc-toolbar-label {
+    font-size: 14px !important;
+  }
+  .rbc-header {
+    font-size: 60%;
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .calendar
+    .rbc-date-cell {
+    padding: 25px 6px;
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .holidays-wrapper,
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .categories-wrapper {
+    padding: 15px;
+  }
+  .holidays-wrapper {
+    margin-bottom: 10px;
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .holidays-wrapper
+    .hw-title
+    p,
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .categories-wrapper
+    .cw-title
+    p {
+    font-size: 14px;
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .holidays-wrapper
+    .hw-body
+    p,
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .holidays-wrapper
+    .hw-body
+    p
+    span,
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .legends
+    .categories-wrapper
+    .cw-body
+    p {
+    font-size: 12px;
+  }
+  .Attendance_calender .attendance-status .text-box p {
+    font-size: 6px;
+  }
+  .breadcrumb-wrapper .attendance-status .percentage,
+  .breadcrumb-wrapper .attendance-status .days {
+    margin: 0 !important;
+  }
+  .Attendance_calender .attendance-status .color-icon {
+    width: 5px;
+    height: 5px;
+  }
+  .breadcrumb-wrapper .attendance-status {
+    display: block;
+  }
+  .breadcrumb-wrapper {
+    padding: 10px !important;
+    .attendance-status {
+      .percentage,
+      .days,
+      .leavedays {
+        justify-content: flex-start;
+      }
+    }
+  }
+  .p-inputtext {
+    height: 25px !important;
+    font-size: 10px !important;
+    &::placeholder {
+      font-size: 10px !important;
+      color: rgba(30, 10, 27, 0.3);
+      padding-left: 0;
+    }
+  }
+  .p-button {
+    height: 25px !important;
+    padding: 0 !important;
+  }
+  .filter-wrapper {
+    align-items: flex-start;
+    .fw-input-fields {
+      width: 100%;
+
+      &::placeholder {
+        font-size: 10px;
+      }
+      .p-button {
+        .pi {
+          font-size: 10px;
+        }
+      }
+    }
+    .fw-btn-wrapper {
+      a {
+        padding: 7px 12px;
+        font-size: 8px;
+      }
+    }
+  }
+  .p-datepicker:not(.p-datepicker-inline) {
+    left: 50px !important;
+  }
+  .Attendance_calender .activity-table-wrapper table {
+    td,
+    th {
+      font-size: 8px !important;
+    }
+  }
+  .Attendance_calender .activity-table-wrapper table tbody tr td {
+    .attendance-status-green,
+    .subject,
+    .teacher-name {
+      font-size: 9px;
+      padding: 0 !important;
+    }
+  }
+  .Attendance_calender .activity-table-wrapper table tbody tr td,
+  th {
+    padding: 7px 10px !important;
+  }
+  .Attendance_calender .activity-table-wrapper table thead tr th {
+    padding: 10px 0;
+  }
+  .Attendance_calender
+    .activity-table-wrapper
+    table
+    tbody
+    tr
+    td
+    .img-wrapper
+    img {
+    width: 20px;
+  }
+  .Attendance_calender .activity-table-wrapper table tbody tr td .img-wrapper {
+    &::after {
+      top: 80%;
+      height: 48px;
+    }
+    .blank_tick {
+      width: 15px;
+    }
+  }
+  .Attendance_calender .activity-table-wrapper table thead tr th:first-child {
+    padding: 7px 10px !important;
+  }
+  .Attendance_calender
+    .attendance-blank-table
+    table
+    tbody
+    tr
+    td
+    .no-record-img {
+    img {
+      width: 80px;
+    }
+  }
+  .Attendance_calender .activity-table-wrapper table tbody tr td span {
+    padding: 4px 10px !important;
+    font-size: 8px !important;
+  }
+  .Attendance_calender .bottom-status-bar .filter-result-count p {
+    font-size: 6px !important;
+  }
+  .Attendance_calender .bottom-status-bar {
+    padding: 10px;
+    min-width: 350px;
+  }
+  .action-icon-wrapper {
+    display: flex;
+    img {
+      width: 12px;
+    }
+  }
+  .breadcrumb-wrapper .breadcrumb p {
+    font-size: 13px !important;
+  }
+  .Apply_leave .form-wrapper .form-title-wrapper .form-title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .Apply_leave {
+    .fieldSetCUST .legendHere {
+      font-size: 10px;
+      top: -16px;
+    }
+    .fieldSetCUST .caledarImg {
+      width: 14px;
+      top: 8px;
+    }
+    .fieldSetCUST .form-select:invalid {
+      font-size: 10px;
+    }
+    .fieldSetCUST .form-select {
+      height: auto;
+    }
+    .form-wrapper .form-control {
+      padding: 10px 14px;
+      &::placeholder {
+        font-size: 10px;
+      }
+    }
+    .form-select {
+      font-size: 10px;
+      background-size: 8px !important;
+    }
+    .fieldSetCUST .formsForTextArea {
+      font-size: 10px;
+    }
+  }
+  .Attendance_calender
+    .calendar-outer-wrapper
+    .calendar-inner-wrapper
+    .calendar
+    .rbc-date-cell {
+    font-size: 10px !important;
+  }
+  .cx-btn-1 {
+    height: 25px;
+    font-size: 10px;
+  }
+  .cx-btn-2 {
+    height: 25px;
+    font-size: 10px;
+  }
+  .topic-accordion-wrapper .accordion-body {
+    padding: 20px 20px 10px 00px;
+  }
+  .Topic_main .topic-main-wrapper .custom-body::before {
+    height: 0;
+  }
+  .Topic_main .topic-main-wrapper .custom-header::before {
+    display: none;
+  }
+  .topic-accordion-wrapper .sub-topic-wrapper .sub-topic-item .sub-icon-box {
+    margin-right: 3px;
+  }
+  .topic-accordion-wrapper .sub-topic-wrapper .sub-topic-item .sub-topic {
+    padding: 10px;
+  }
+  .topic-accordion-wrapper .accordion-body {
+    padding: 0;
+    padding-left: 5px;
+  }
+  .Assignment .main-assignment-wrapper .assignment-card {
+    padding-bottom: 2rem;
+  }
+  .Study_material_topic
+    .study-material-topic-details
+    .study-material-details-wrapper
+    .ad-text-box {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+  .Study_material_topic
+    .study-material-topic-details
+    .rating-in-heading::before {
+    top: 61%;
+  }
+  .breadcrumb-wrapper .breadcrumb .belowLink {
+    font-size: 13px;
+  }
+  .breadcrumb-wrapper .btn-wrapper p {
+    font-size: 13px;
+  }
+  .p-tabview-title {
+    font-size: 13px;
+  }
+}

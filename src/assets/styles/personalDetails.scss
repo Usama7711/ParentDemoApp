@@ -1,0 +1,414 @@
+// Styles which are common
+.innerLabel {
+  font-size: 16px;
+  color: #954386;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(30, 10, 27, 0.1);
+  padding-bottom: 10px;
+}
+
+.labelKey {
+  color: rgba(30, 10, 27, 0.3);
+  font-size: 12px;
+}
+
+.labelValue {
+  color: rgba(30, 10, 27, 0.8);
+  font-size: 14px;
+}
+
+.labelBlackVal {
+  font-size: 14px;
+  color: #1e0a1b;
+}
+
+.labelGreen {
+  color: #abc73e;
+  font-size: 14px;
+}
+
+.breakLine {
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(30, 10, 27, 0.1);
+}
+
+.tableTxt {
+  color: rgba(30, 10, 27, 0.6);
+  font-size: 12px;
+  padding: 1rem;
+}
+
+// This is form input field style
+.fieldSetCUST {
+  position: relative;
+
+  .dateChapter {
+    width: 100%;
+  }
+
+  .caledarImg {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+  }
+
+  .legendHere {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: #fff;
+    font-size: 12px;
+    padding: 0px 5px;
+    color: rgba(30, 10, 27, 0.3);
+
+    .ashhStar {
+      color: red !important;
+      font-size: 15px;
+      border-bottom: none !important;
+    }
+  }
+
+  // formSelect
+  .form-select {
+    height: 50px;
+    border-radius: 12px;
+
+    &:invalid {
+      color: rgba(30, 10, 27, 0.6);
+      font-size: 14px;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      border-color: rgba(30, 10, 27, 0.2) !important;
+    }
+  }
+
+  // For TextArea
+  .formsForTextArea {
+    height: 120px;
+    padding: 1rem !important;
+    &::placeholder {
+      color: rgba(30, 10, 27, 0.6);
+      font-size: 14px;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      border-color: rgba(30, 10, 27, 0.2) !important;
+    }
+  }
+
+  // Form-contriol text
+  .formsForValid {
+    height: 50px;
+    border-radius: 10px;
+
+    &::placeholder {
+      color: rgba(30, 10, 27, 0.6);
+      font-size: 14px;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      border-color: rgba(30, 10, 27, 0.2) !important;
+    }
+  }
+}
+
+// Prime react date picker custom styles
+.p-inputtext {
+  height: 48px;
+  color: rgba(30, 10, 27, 0.6);
+  border-radius: 12px !important;
+
+  &::placeholder {
+    padding: 0px 10px;
+    color: rgba(30, 10, 27, 0.6);
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgba(30, 10, 27, 0.2) !important;
+  }
+
+  &:hover {
+    border-color: rgba(30, 10, 27, 0.2) !important;
+  }
+}
+
+.p-datepicker {
+  min-width: 300px !important;
+}
+
+// Edit profile styles &
+// All pages general style &
+
+.personal_details,
+.edit_details,
+.change_password,
+.New_registration,
+.Edit_Registration,
+.viewKids_details,
+.Edit_KidsDetails,
+.Id_cards,
+.View_Registration,
+.Invoice_fee,
+.Certificate {
+  .mainLandingCard {
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px rgba(12, 26, 75, 0.24),
+      0px 3px 8px -1px rgba(50, 50, 71, 0.05);
+    border-radius: 16px;
+    overflow-y: auto;
+
+    .innerHeading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .innerText {
+      // .innerLabel {
+      //     font-size: 16px;
+      //     color: #954386;
+      // }
+    }
+
+    .mainLink {
+      text-decoration: none;
+    }
+
+    .profileCard {
+      background: linear-gradient(
+        180deg,
+        rgba(237, 243, 214, 0.5) 0%,
+        rgba(238, 211, 233, 0.5) 100%
+      );
+      height: 90px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 60px;
+
+      .userCard {
+        position: relative;
+        display: flex;
+        width: 50%;
+
+        .UserImg {
+          position: absolute;
+          top: -15px;
+          left: 20px;
+          height: 90px;
+          width: 90px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 16px rgba(121, 38, 106, 0.16);
+        }
+
+        .imgSelector {
+          cursor: pointer;
+
+          .editImg {
+            position: absolute;
+            top: 60px;
+            left: 95px;
+            height: 30px;
+            width: 30px;
+            box-shadow: 0px 4px 16px rgba(121, 38, 106, 0.16);
+
+            border-radius: 50%;
+          }
+        }
+
+        .userImg {
+          position: absolute;
+          left: 10px;
+          border-radius: 5px;
+          top: -15px;
+          height: 90px;
+          width: 90px;
+        }
+
+        .UserName {
+          position: absolute;
+          top: 48px;
+          left: 115px;
+          font-size: 16px;
+          color: rgba(30, 10, 27, 0.6);
+        }
+      }
+
+      .notificationsMain {
+        display: flex;
+
+        .mailBox,
+        .BellBox {
+          position: relative;
+          margin-right: 1rem;
+
+          .popUpTxt {
+            background-color: #f3cee7;
+            position: absolute;
+            bottom: 10px;
+            left: 12px;
+            height: 21px;
+            width: 21px;
+            border-radius: 50%;
+            font-size: 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .informationSec {
+      .recentDetails {
+        display: flex;
+        align-items: center;
+
+        .pointDot {
+          height: 7px;
+          width: 7px;
+          border-radius: 50%;
+          background-color: #954386;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .belowBtns {
+    }
+  }
+
+  .middleTransporter {
+    display: flex;
+    justify-content: space-between;
+
+    .leftSideCOnt,
+    .rightSideCOnt {
+      width: 49%;
+
+      .custFormSel {
+        width: 100%;
+      }
+
+      .bottomToggle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .definationLabel {
+          .definationTxt {
+            font-size: 14px;
+            color: rgba(30, 10, 27, 0.6);
+          }
+        }
+
+        .definationRadios {
+          display: flex;
+          flex-wrap: wrap;
+
+          .secondRadio {
+            margin-left: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .belowBtns {
+    display: flex;
+    justify-content: flex-end;
+
+    .cancelLink {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+}
+
+// Notification setting page styles
+.notification_settings {
+  .tableBorders {
+    border: 1px solid rgba(30, 10, 27, 0.1);
+    border-radius: 20px;
+    overflow-x: auto;
+    background-color: #fff;
+    table {
+      min-width: 900px;
+    }
+
+    .table {
+      tr {
+        th {
+          background: rgba(254, 249, 251, 0.65);
+          border-bottom: 1px solid rgba(30, 10, 27, 0.1) !important;
+          opacity: 0.6;
+          font-weight: 400;
+          padding: 1rem;
+          font-size: 14px;
+          line-height: 18px;
+          color: rgba(30, 10, 27, 0.5);
+        }
+
+        .insideTd {
+          width: 18%;
+        }
+      }
+
+      .tableBody {
+        tr {
+          td {
+            // padding: 10px !important;
+            color: rgba(30, 10, 27, 0.6);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 0.8rem 1rem;
+            line-height: 20px;
+            border-bottom: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  #customizeTable {
+    .form-check-input {
+      cursor: pointer;
+      border-radius: 50% !important;
+      height: 14px;
+      width: 14px;
+      margin-right: 0.5rem;
+      margin-top: 0.35em !important;
+
+      &:checked {
+        background-color: #04b54c !important;
+        border: #04b54c;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+//

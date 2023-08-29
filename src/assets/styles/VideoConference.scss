@@ -1,0 +1,77 @@
+#VideoConference {
+    .single_Video {
+        background: #FFFFFF;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        .heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #27272E;
+            margin-bottom: 5px;
+        }
+
+        .time {
+            font-size: 10px;
+            font-weight: 400;
+            color: #1E0A1B99;
+            margin-bottom: 20px;
+        }
+
+        .Participant {
+            .heading_Participant {
+                font-size: 10px;
+                font-weight: 400;
+                color: #1E0A1B99;
+            }
+
+            .members {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .people_img {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    img {
+                        height: 25px;
+                        width: 25px;
+                        margin-right: 7px;
+                        cursor: pointer;
+                    }
+
+                    .count {
+                        height: 25px;
+                        width: 25px;
+                        color: #954386;
+                        border: 1px solid rgba(149, 67, 134, 0.25);
+                        box-shadow: 0px 4px 16px rgba(121, 38, 106, 0.16);
+                        border-radius: 5px;
+                        // padding: 7px 3px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 8px;
+                        margin: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .JoinBtn {
+                button {
+                    background: linear-gradient(229.12deg, #B23A9C 3.8%, #79266A 95.87%);
+                    color: white;
+                    padding: 3px 5px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

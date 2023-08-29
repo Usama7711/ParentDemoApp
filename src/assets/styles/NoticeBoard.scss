@@ -1,0 +1,112 @@
+#NoticeBoard {
+    .single_card {
+        background: #FFFFFF;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+
+        .banner {
+            width: 100%;
+            border-radius: 16px 16px 0 0;
+            margin-bottom: 7px;
+            // height: 70px;
+            // overflow: hidden;
+            // -webkit-clip-path: inset(5px 0px 121px 0px);;
+            // clip-path: inset(5px 0px 121px 0px);;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #27272E;
+            margin-bottom: 7px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .date {
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(17, 17, 17, 0.5);
+            ;
+            margin-bottom: 7px;
+
+            span {
+                color: #954386;
+                font-weight: 500;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+
+            .discription {
+                overflow: hidden;
+                width: 80%;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                font-size: 13px;
+                font-weight: 400;
+                color: rgba(30, 10, 27, 0.6);
+                ;
+                margin-bottom: 0;
+            }
+
+            .forword {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#NoticeDetail {
+    .main_wrapper {
+        background: #FFFFFF;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+
+        .head {
+            border-bottom:  1px solid rgba(30, 10, 27, 0.3);
+            margin-bottom: 10px;
+            .title {
+                font-size: 16px;
+                font-weight: 600;
+                color: #954386;
+                margin-bottom: 10px;
+            }
+
+            .date {
+                font-size: 12px;
+                font-weight: 600;
+                color: #11111180;
+                margin: 0;
+                span {
+                    color: #1E0A1B99;
+                    font-weight: 700;
+                }
+            }
+        }
+        .body{
+            img{
+                width: 100%;
+                margin-bottom: 20px;
+                // height: 250px;
+            }
+            .answer, .qution{
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(30, 10, 27, 0.6);
+                margin: 0;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,1008 @@
+.auth-main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #edf3d6 0%, #eed3e9 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input:-webkit-autofill {
+    background-color: #fff !important;
+  }
+
+  input:-webkit-internal-autofill-selected {
+    background-color: #fff !important;
+  }
+  @media all and (max-width: 800px) {
+    #Lock .auth-card {
+      width: 700px;
+      max-width: 800px;
+      .brand-logo {
+        left: 190px;
+      }
+    }
+
+  }
+  @media all and (max-width: 700px) {
+    #ParentSignUp .auth-card {
+      padding: 80px 20px 20px 20px;
+    }
+    .registration-main .registration-auth-wrapper .registration-card .brand-logo{
+      width: 240px;
+    }
+    .auth-wrapper .login-wrapper .auth-card {
+      padding: 75px 20px 20px 20px;
+    }
+    #Lock .lock-outer-main {
+      flex-direction: column;
+      .left {
+        margin-bottom: 15px;
+      }
+    }
+    #Lock .lock-outer-main .right {
+      margin-left: 0;
+    }
+
+    #Lock .lock-outer-main .left img {
+      width: 150px;
+      height: 150px;
+    }
+    #Lock .auth-card {
+      padding: 75px 20px 20px 20px;
+      width: 600px;
+      max-width: 800px;
+      .brand-logo {
+        left: 190px;
+      }
+    }
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 140px;
+    }
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 600px;
+    }
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      width: 250px;
+    }
+  }
+  @media all and (max-width: 600px) {
+    #ParentSignUp .p-tabview .p-tabview-nav li {
+      margin-bottom: 10px;
+    }
+    
+    #ParentSignUp .p-tabview .p-tabview-nav {
+      flex-wrap: wrap;
+    }
+    .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      padding: 0 5px !important;
+    }
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 60px;
+    }
+    #Lock .auth-card {
+      width: 500px;
+      max-width: 800px;
+      .brand-logo {
+        left: 130px;
+      }
+    }
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 125px;
+    }
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 500px;
+    }
+    #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
+      border-radius: 10px 0 0 10px;
+    }
+    #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+  @media all and (max-width: 500px) {
+    #LoginWithOTP .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+      font-size: 13px;
+    }
+    #ParentSignUp .email-otp {
+      padding-top: 25px;
+    }
+    #ParentSignUp .fieldSetCUST {
+      margin-bottom: 0;
+    }
+    #ParentSignUp .p-tabview-nav-container {
+      margin-bottom: 10px;
+    }
+    #ParentSignUp .p-tabview .p-tabview-nav li {
+      margin-bottom: 10px;
+    }
+    #ParentSignUp .p-tabview .p-tabview-nav .tab3 a {
+      border-radius: 10px 0 0 10px;
+    }
+    #ParentSignUp .p-tabview .p-tabview-nav .tab2 a {
+      border-radius: 0 10px 10px 0;
+    }
+    #LoginWithOTP .p-tabview .p-tabview-nav {
+      flex-wrap: wrap;
+    }
+    #LoginWithOTP .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+      font-size: 13px;
+    }
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 50px;
+    }
+
+    #Lock .auth-card {
+      width: 400px;
+      max-width: 800px;
+      .brand-logo {
+        left: 85px;
+      }
+    }
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 70px;
+    }
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 400px;
+    }
+  }
+  @media all and (max-width: 400px) {
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      width: 200px;
+    }
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .login-otp-btn {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .login-register-btn {
+      width: 100%;
+    }
+    .auth-wrapper .login-wrapper .auth-card .auth-btns .outerbtn-main {
+      flex-direction: column;
+    }
+    #LoginWithOTP .main-tab-login-with-otp .inputs-otp .form-control {
+      width: 45px;
+    }
+    #Lock .auth-card {
+      width: 350px;
+      .brand-logo {
+        left: 75px;
+      }
+    }
+    .auth-wrapper .login-wrapper .auth-card .brand-logo {
+      left: 75px;
+    }
+    
+    .auth-wrapper .login-wrapper .auth-card {
+      width: 350px;
+    }
+  }
+}
+
+.auth-wrapper {
+  background-image: url(../images/auth_bg.svg);
+  width: 100vw;
+  max-width: 945px;
+  height: 90vh;
+  // max-height:800px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-wrapper {
+
+    .auth-card {
+      position: relative;
+      padding: 95px 40px 40px 40px;
+      height: auto;
+      width: 600px;
+      max-width: 622px;
+      background: #ffffff;
+      border-radius: 10px;
+      .brand-logo {
+        left: calc(300px - 160px);
+        height: 130px;
+        width: 320px;
+        position: absolute;
+        top: -65px;
+      }
+
+      .fieldSetCUST {
+        position: relative;
+
+        .dateChapter {
+          width: 100%;
+        }
+
+        .caledarImg {
+          position: absolute;
+          top: 12px;
+          right: 10px;
+        }
+
+        .legendHere {
+          position: absolute;
+          top: -10px;
+          left: 15px;
+          background-color: #fff;
+          font-size: 14px;
+          padding: 0px 5px;
+          color: rgba(30, 10, 27, 0.3);
+
+          .ashhStar {
+            color: red !important;
+            font-size: 15px;
+          }
+        }
+
+        // formSelect
+        .form-select {
+          height: 48px;
+          border-radius: 12px;
+          font-size: 14px;
+          &:invalid {
+            color: rgba(30, 10, 27, 0.6);
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
+          }
+        }
+
+        // For TextArea
+        .formsForTextArea {
+          &::placeholder {
+            color: rgba(30, 10, 27, 0.6);
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
+          }
+        }
+
+        // Form-contriol text
+        .formsForValid {
+          height: 50px;
+          border-radius: 10px;
+
+          &::placeholder {
+            color: rgba(30, 10, 27, 0.6);
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border-color: rgba(30, 10, 27, 0.2) !important;
+          }
+        }
+      }
+      .forgot-pass {
+        margin-top: 10px;
+        text-align: end;
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+
+          color: rgba(30, 10, 27, 0.3);
+        }
+      }
+      .auth-btns {
+        .outerbtn-main {
+          justify-content: space-between;
+        }
+        .login-btn {
+          margin: 20px 0;
+          height: 40px;
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          color: #ffffff;
+          background: #abc73e;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+        }
+        .login-otp-btn {
+          width: calc(50% - 10px);
+
+          height: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+          color: rgba(30, 10, 27, 0.6);
+          background: #fff;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+          border-radius: 10px;
+        }
+        .login-register-btn {
+          width: calc(50% - 10px);
+
+          height: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          text-align: center;
+          color: rgba(30, 10, 27, 0.6);
+          background: #fff;
+          border-radius: 10px;
+          border: 1px solid #abc73e;
+          border-radius: 10px;
+        }
+      }
+      .footer-content {
+        margin-top: 20px;
+        text-align: center;
+        label {
+          font-weight: 500;
+          font-size: 14px;
+          color: rgba(30, 10, 27, 0.6);
+          img {
+            margin: 0 4px 4px 4px;
+          }
+        }
+      }
+      .heading {
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+        text-align: center;
+        label {
+          padding-bottom: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          text-transform: capitalize;
+
+          color: rgba(30, 10, 27, 0.6);
+        }
+      }
+    }
+  }
+}
+
+.margin-b-input {
+  margin-bottom: 30px;
+}
+
+#LoginWithOTP {
+
+  .auth-card .heading{
+    margin-bottom: 15px;
+  }
+  .auth-card .auth-btns .login-register-btn {
+    width: 100%;
+  }
+
+  #parent-sign-app-tab{
+.first-tab{
+  width: 25%;
+  .nav-link {
+    border-radius: 10px 0 0 10px;
+  }
+  .nav-link::after{
+    border-radius: 10px 0 0 10px;
+  }
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
+}
+.second-tab{
+  width: 25%;
+  .nav-link {
+    border-radius: 0 0 0 0;
+  }
+  .nav-link::after{
+    border-radius: 0 0 0 0;
+  }
+  .nav-link.active::after {
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
+}
+.third-tab{
+  width: 25%;
+  .nav-link {
+    border-radius: 0 0 0 0;
+  }
+  .nav-link::after{
+    border-radius: 0 0 0 0;
+  }
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+.fourth-tab{
+  width: 25%;
+  .nav-link {
+    border-radius: 0 10px 10px 0;
+  }
+  .nav-link::after{
+    border-radius: 0 10px 10px 0;
+  }
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+  }
+
+  .main-tab-login-with-otp {
+
+    .tab-pane{
+      transition: all 1s ease;
+    }
+    .nav-link::after {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+    }
+    .nav-link::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background: #abc73e !important;
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link.active {
+      transition: all 0.3s ease;
+      background-color: #abc73e !important;
+    }
+    
+
+    .left-tab {
+      text-align: center;
+      width: 50%;
+      .nav-link {
+        border-radius: 10px 0 0 10px;
+      }
+      .nav-link::after{
+        border-radius: 10px 0 0 10px;
+      }
+      .nav-link.active::after {
+        transform: scaleX(1);
+        transform-origin: bottom right;
+      }
+    }
+    .right-tab {
+      width: 50%;
+      text-align: center;
+      .nav-link {
+        border-radius: 0 10px 10px 0;
+      }
+      .nav-link::after{
+        border-radius: 0 10px 10px 0;
+      }
+      .nav-link.active::after {
+        transform: scaleX(0);
+        transform-origin: bottom left;
+      }
+    }
+
+    .nav {
+      margin-bottom: 20px;
+    }
+    .nav-link.active {
+      // background: #abc73e;
+      font-weight: 500;
+      font-size: 14px;
+      color: #ffffff;
+    }
+    .nav-link {
+      position: relative;
+      height: 40px;
+      border: 1px solid #abc73e;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(30, 10, 27, 0.6);
+    }
+    .inputs-otp {
+      display: flex;
+      justify-content: space-between;
+      .form-control {
+        text-align: center;
+        border: 1px solid rgba(30, 10, 27, 0.1);
+        &:focus {
+          box-shadow: none;
+          border: 1px solid rgba(30, 10, 27, 0.1);
+        }
+        border-radius: 10px;
+        // width: calc(100% - 5px);
+        margin: 0 5px;
+      }
+    }
+    .resend {
+      margin-top: 5px;
+      text-align: end;
+      label {
+        font-weight: 500;
+        font-size: 12px;
+        color: rgba(30, 10, 27, 0.3);
+      }
+    }
+    .text-heading {
+      margin-bottom: 10px;
+      text-align: center;
+      label {
+        width: 272px;
+
+        font-weight: 400;
+        font-size: 12px;
+        color: rgba(30, 10, 27, 0.6);
+      }
+    }
+  }
+  .fieldSetCUST {
+    margin-bottom: 20px;
+  }
+  .p-tabview .p-tabview-nav {
+    border: none;
+  }
+  .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    // border: none;
+    background: #abc73e;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+    box-shadow: unset;
+  }
+  .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    margin: 0;
+    height: 40px;
+    border: 1px solid #abc73e;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(30, 10, 27, 0.6);
+  }
+
+  // .nav-link {
+  //   position: relative;
+  //   // transition: all 0.5s ease;
+  //   background: #f6efe9 !important;
+  //   border: none !important;
+  // }
+  // .nav-link::after {
+  //   transform: scaleX(0);
+  //   transform-origin: bottom right;
+  // }
+  // .nav-link::after {
+  //   content: " ";
+  //   display: block;
+  //   border-radius: 10px 0px 0px 10px !important;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   inset: 0 0 0 0;
+  //   background: #9c4900 !important;
+  //   z-index: -1;
+  //   transition: transform 0.3s ease;
+  // }
+
+  // .nav-link.active {
+  //   transition: all 1s ease;
+  //   background-color: #9c4900 !important;
+  // }
+  // .nav-link.active::after {
+  //   transform: scaleX(1);
+  //   transform-origin: bottom right;
+  // }
+
+  .p-tabview-ink-bar {
+    left: 0;
+    display: none;
+  }
+  .p-tabview .p-tabview-nav li {
+    width: calc(50% - 0px);
+  }
+  .p-tabview .p-tabview-nav {
+    justify-content: center;
+  }
+  .p-tabview-nav-container {
+    margin-bottom: 30px;
+  }
+  //   .p-tabview .p-tabview-nav .p-tabview-ink-bar{
+  //     height: 40px;
+  //     background: #e03400;
+  //     width: calc(50% - 20px) !important;
+  //   }
+  //   .p-tabview-title{
+  //     position: relative;
+  //     z-index: 5;
+  //   }
+
+  .p-tabview .p-tabview-nav {
+    .left {
+      a {
+        border-radius: 10px 0 0 10px !important;
+      }
+    }
+    .right {
+      a {
+        border-radius: 0 10px 10px 0 !important;
+      }
+    }
+  }
+
+  .p-tabview .p-tabview-panels {
+    padding: 0;
+  }
+  .p-tabview-nav-link {
+    justify-content: center;
+  }
+}
+#ParentSignUp {
+  .auth-card .auth-btns .login-btn{
+    margin: 0 0 20px 0;
+  }
+
+  .auth-card {
+    padding: 90px 40px 40px 40px;
+  }
+  .email-otp {
+    padding-top: 20px;
+    border-top: 1px solid rgba(30, 10, 27, 0.3);
+  }
+  .p-tabview-nav-container {
+    margin-bottom: 20px;
+  }
+}
+#ForgotPassword {
+  .auth-card .auth-btns .login-btn {
+    margin: unset;
+  }
+}
+
+#Lock {
+  .lock-head-ic {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(30, 10, 27, 0.3);
+    label {
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: rgba(30, 10, 27, 0.6);
+      padding-bottom: 10px;
+    }
+
+    .ic_lock {
+      margin-right: 7px;
+      margin-bottom: 3px;
+    }
+  }
+  .forgot-pass {
+    text-align: start;
+    margin-top: 5px;
+  }
+
+  .lock-outer-main {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    .left {
+      img {
+        height: 200px;
+        width: 200px;
+        border-radius: 10px;
+      }
+    }
+    .right {
+      width: 100%;
+      margin-left: 30px;
+    }
+  }
+  .auth-card {
+    width: 800px;
+    max-width: 800px;
+  }
+  .email-text {
+    label {
+      font-weight: 600;
+      font-size: 16px;
+      color: rgba(30, 10, 27, 0.6);
+      margin-bottom: 15px;
+    }
+  }
+  .footer-content {
+    margin-top: 15px;
+  }
+
+  .lock-btn {
+    position: absolute;
+    background-color: #abc73e;
+    border: none;
+    right: 0;
+    top: 0;
+    border-radius: 0 10px 10px 0;
+    height: 50px;
+    width: 50px;
+    border-bottom: 1px solid #ced4da;
+    border-top: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+  }
+  .auth-card .brand-logo {
+    left: 240px;
+  }
+  .auth-card .fieldSetCUST .formsForValid {
+    padding-right: 55px;
+  }
+}
+
+// New Registration Pages Style Start
+
+.registration-main {
+  height: 100%;
+  padding: 5rem 0 3rem;
+  .registration-auth-wrapper {
+    background-image: url(../images/auth_bg.svg);
+    width: 100vw;
+    max-width: 80vw;
+    // height: 90vh;
+    // max-height:1024px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    background-position-x: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+    .form-control {
+      border-radius: 10px !important;
+      font-size: 14px;
+      padding: 0.375rem 1.1rem;
+      &::placeholder {
+        font-size: 14px !important;
+        color: rgba(30, 10, 27, 0.6);
+      }
+    }
+    .p-inputtext {
+      font-size: 14px;
+    }
+    .fieldSetCUST {
+      .formsForTextArea {
+        padding: 12px 18px;
+      }
+      .form-select {
+        font-size: 14px;
+      }
+      .legendHere {
+        padding: 0 15px 0 5px;
+      }
+    }
+    .registration-card {
+      width: 75%;
+      position: relative;
+      padding: 95px 40px 10px 40px;
+      height: auto;
+      // max-width: 80%;
+      background: #ffffff;
+      border-radius: 10px;
+
+      .top-school-name {
+        p {
+          margin-bottom: 0;
+          font-weight: 500;
+          font-size: 32px;
+          color: #954386;
+          text-align: center;
+        }
+      }
+      .top-heading-section {
+        margin: 35px 0 20px 0;
+        p {
+          margin-bottom: 0;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .registration {
+          color: #954386;
+          margin-bottom: 10px;
+        }
+        .details {
+          padding-top: 10px;
+          color: #1e0a1b;
+        }
+      }
+      .brand-logo {
+        left: 140px;
+        height: 130px;
+        width: 320px;
+        position: absolute;
+        top: -65px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .profileCard {
+        background: linear-gradient(
+          180deg,
+          rgba(237, 243, 214, 0.5) 0%,
+          rgba(238, 211, 233, 0.5) 100%
+        );
+        height: 90px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 60px;
+
+        .userCard {
+          position: relative;
+          display: flex;
+          width: 50%;
+
+          .UserImg {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            height: 90px;
+            width: 90px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 16px rgba(121, 38, 106, 0.16);
+          }
+
+          .imgSelector {
+            cursor: pointer;
+
+            .editImg {
+              position: absolute;
+              top: 60px;
+              left: 95px;
+              height: 30px;
+              width: 30px;
+              box-shadow: 0px 4px 16px rgba(121, 38, 106, 0.16);
+
+              border-radius: 50%;
+            }
+          }
+
+          .userImg {
+            position: absolute;
+            left: 10px;
+            border-radius: 5px;
+            top: -15px;
+            height: 90px;
+            width: 90px;
+          }
+
+          .UserName {
+            position: absolute;
+            top: 48px;
+            left: 115px;
+            font-size: 16px;
+            color: rgba(30, 10, 27, 0.6);
+          }
+        }
+
+        .notificationsMain {
+          display: flex;
+
+          .mailBox,
+          .BellBox {
+            position: relative;
+            margin-right: 1rem;
+
+            .popUpTxt {
+              background-color: #f3cee7;
+              position: absolute;
+              bottom: 10px;
+              left: 12px;
+              height: 21px;
+              width: 21px;
+              border-radius: 50%;
+              font-size: 8px;
+              font-weight: bold;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .informationSec {
+        .recentDetails {
+          display: flex;
+          align-items: center;
+
+          .pointDot {
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background-color: #954386;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .border-top {
+    border-top: 0.5px solid rgba(30, 10, 27, 0.3);
+  }
+  .bottom-wrapper {
+    padding-top: 20px;
+    .captcha-text {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(30, 10, 27, 0.6);
+      .ashhStar {
+        color: red !important;
+        font-size: 15px;
+        border-bottom: none !important;
+      }
+    }
+    .login-register-btn {
+      // width: calc(50% - 10px);
+      height: 40px;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(30, 10, 27, 0.6);
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #abc73e;
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+
+    .button-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left-button {
+      }
+      .right-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .cx-btn-1{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+
+  
+}
+
+@media all and (max-width: 800px){}
+  @media all and (max-width: 700px){}
+  @media all and (max-width: 600px){
+    .registration-main .registration-auth-wrapper .registration-card .brand-logo{
+      width: 220px !important;
+    }
+    .registration-main .registration-auth-wrapper .registration-card{
+      padding: 65px 40px 10px 40px;
+    }
+  }
+  @media all and (max-width: 500px){}
+  @media all and (max-width: 400px){}
+
+// New Registration Pages Style End
