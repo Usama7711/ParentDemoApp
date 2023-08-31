@@ -84,6 +84,7 @@ function App() {
   let currentRoute = location.pathname;
   const { sidebar, setSidebar, schoolName, token, setSectionValue, sectionValue, setFormData, formData } = useContext(AppContext);
   const [dedmoModal, setDemoModal] = useState(false);
+  const [dedmoModalSection, setDemoModalSection] = useState("");
   // const sidebarActive = () => setSidebar(!sidebar)
 
   useEffect(() => {
@@ -172,6 +173,7 @@ function App() {
         navigate("/dashboard")
       }
       setDemoModal(false)
+      setSectionValue(dedmoModalSection)
     }).catch((err) => {
       console.log(err)
     })
@@ -295,77 +297,77 @@ function App() {
             <div className="customRow">
               <div className="row">
                 <div className="col-lg-6">
-                  <label htmlFor="label1" className="singleConatinBox" onClick={() => { setSectionValue("dashboard") }}>
+                  <label htmlFor="label1" className="singleConatinBox" onClick={() => { setDemoModalSection("dashboard") }}>
                     <span>Dashboard</span>
                     <input type="radio" name="labelz" id="label1" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label2" className="singleConatinBox" onClick={() => { setSectionValue("attendance") }}>
+                  <label htmlFor="label2" className="singleConatinBox" onClick={() => { setDemoModalSection("attendance") }}>
                     <span>Attendance</span>
                     <input type="radio" name="labelz" id="label2" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label3" className="singleConatinBox" onClick={() => { setSectionValue("academics") }}>
+                  <label htmlFor="label3" className="singleConatinBox" onClick={() => { setDemoModalSection("academics") }}>
                     <span htmlFor="">Academics</span>
                     <input type="radio" name="labelz" id="label3" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label4" className="singleConatinBox" onClick={() => { setSectionValue("eLearning") }}>
+                  <label htmlFor="label4" className="singleConatinBox" onClick={() => { setDemoModalSection("eLearning") }}>
                     <span htmlFor="">e-Learning</span>
                     <input type="radio" name="labelz" id="label4" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label5" className="singleConatinBox" onClick={() => { setSectionValue("assessment") }}>
+                  <label htmlFor="label5" className="singleConatinBox" onClick={() => { setDemoModalSection("assessment") }}>
                     <span>Assessment</span>
                     <input type="radio" name="labelz" id="label5" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label6" className="singleConatinBox" onClick={() => { setSectionValue("administration") }}>
+                  <label htmlFor="label6" className="singleConatinBox" onClick={() => { setDemoModalSection("administration") }}>
                     <span htmlFor="">Administration</span>
                     <input type="radio" name="labelz" id="label6" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label7" className="singleConatinBox" onClick={() => { setSectionValue("cashlessWallet") }}>
+                  <label htmlFor="label7" className="singleConatinBox" onClick={() => { setDemoModalSection("cashlessWallet") }}>
                     <span htmlFor="">Cashless Wallet</span>
                     <input type="radio" name="labelz" id="label7" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label8" className="singleConatinBox" onClick={() => { setSectionValue("bus") }}>
+                  <label htmlFor="label8" className="singleConatinBox" onClick={() => { setDemoModalSection("bus") }}>
                     <span htmlFor="">Bus</span>
                     <input type="radio" name="labelz" id="label8" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label9" className="singleConatinBox" onClick={() => { setSectionValue("communication") }}>
+                  <label htmlFor="label9" className="singleConatinBox" onClick={() => { setDemoModalSection("communication") }}>
                     <span htmlFor="">Communication</span>
                     <input type="radio" name="labelz" id="label9" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label10" className="singleConatinBox" onClick={() => { setSectionValue("myDiary") }}>
+                  <label htmlFor="label10" className="singleConatinBox" onClick={() => { setDemoModalSection("myDiary") }}>
                     <span htmlFor="">My Diary</span>
                     <input type="radio" name="labelz" id="label10" className="cheackcat" />
                     <div className="cheackcatdiv"></div>
                   </label>
                 </div>
                 <div className="col-lg-6">
-                  <label htmlFor="label11" className="singleConatinBox" onClick={() => { setSectionValue("settings") }}>
+                  <label htmlFor="label11" className="singleConatinBox" onClick={() => { setDemoModalSection("settings") }}>
                     <span htmlFor="">Settings</span>
                     <input type="radio" name="labelz" id="label11" className="cheackcat" />
                     <div className="cheackcatdiv"></div>

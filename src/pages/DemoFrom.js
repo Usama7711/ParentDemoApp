@@ -177,9 +177,6 @@ const DemoFrom = () => {
         })
     };
 
-
-    
-
     return (
         <main className="DemoFormMian">
             <div className="DemoFrom-wrapper">
