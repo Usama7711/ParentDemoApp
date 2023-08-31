@@ -726,3 +726,107 @@ p {
 .p-tabview .p-tabview-nav li .p-tabview-nav-link {
   // border-width: 0px 0px 1px 0px !important;
 }
+
+.modalHeadOTP {
+  p {
+    span {
+      color: #954386;
+      font-weight: 700;
+      font-size: 19px;
+      margin-left: 10px;
+      text-transform: capitalize;
+    }
+
+    &:first-child {
+      font-size: 15px;
+    }
+  }
+}
+
+.DemoNextPreviousBTN {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  right: 10px;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 10px;
+
+  button {
+    margin-right: 10px;
+  }
+}
+
+.customRow {
+  margin-top: 20px;
+
+  .singleConatinBox {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #954386;
+    border-radius: 20px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 2s;
+    position: relative;
+
+    input {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .cheackcatdiv {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-right: solid 1px #954386;
+      border-left: solid 1px #954386;
+      border-top: solid 1px #954386;
+      border-radius: 20px;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    input:checked~div.cheackcatdiv {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    span {
+      text-align: center;
+      color: grey;
+    }
+
+    &:hover {
+      span{
+        color: #954386;
+      }
+    }
+  }
+
+
+}
+
+.main-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  button {
+    width: 138px;
+  }
+
+  .cx-btn-1 {
+    margin-right: 20px;
+  }
+
+  .cx-btn-2 {}
+}

@@ -24,7 +24,7 @@ import PersonalDetails from "./pages/Settings/PersonalDetails";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import EditProfile from "./pages/Settings/EditProfile";
 import ChangePassword from "./pages/Settings/ChangePassword";
 import NotificationSetting from "./pages/Settings/NotificationSetting";
@@ -76,28 +76,122 @@ import NoticeBoard from "./pages/Communication/NoticeBoard";
 import NoticeDetail from "./pages/Communication/NoticeDetail";
 import MyDiary from "./pages/Communication/MyDiary";
 import DemoFrom from "./pages/DemoFrom";
+import axios from "axios";
+import { Modal } from "react-bootstrap";
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
   let currentRoute = location.pathname;
-  const { sidebar, setSidebar, schoolName } = useContext(AppContext);
+  const { sidebar, setSidebar, schoolName, token, setSectionValue, sectionValue, setFormData, formData } = useContext(AppContext);
+  const [dedmoModal, setDemoModal] = useState(false);
   // const sidebarActive = () => setSidebar(!sidebar)
 
   useEffect(() => {
     AOS.init();
   }, []);
 
+  // function NextSlide() {
+  //   const requestBody = JSON.stringify({ demoRoute: sectionValue });
+  //   fetch('https://api-demo.edsys.in:3008/api/demo/parent/manual-demo/next', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'token': token,
+  //       // Add any additional headers if needed
+  //     },
+  //     body: requestBody,
+  //   })
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       return response.json();
+  //     })
+  //     .then(data => {
+  //       // Handle the response data here
+
+  //       navigate(data.url)
+  //     })
+  //     .catch(error => {
+  //       // Handle any errors that occurred during the fetch or response parsing
+  //       console.error(error);
+  //       navigate("/")
+  //     });
+  // }
+  // const NextSlide = () => {
+  //   const accessToken = token; // Replace with your actual token
+
+  //   const config = {
+  //     headers: {
+  //       "token": accessToken,
+  //     },
+  //   };
+
+  //   axios
+  //     .post("https://api-demo.edsys.in:3008/api/demo/parent/manual-demo/next", null, config)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+  // };
+  const NextDemoBTNSubmit = (e) => {
+    // setIsLoading(true);
+    let url = 'https://api-demo.edsys.in:3008/api/demo/form/submit-details';
+    const data = {
+      "name": (formData.name),
+      "email": (formData.email),
+      "number": (formData.number),
+      "country": (formData.country),
+      "city": (formData.city),
+      //   "utm_source"/: getUTMsource
+    };
+    axios.post(url, data).then((response) => {
+      if (sectionValue === "attendance") {
+        navigate("/Calendar")
+      } else if (sectionValue === "academics") {
+        navigate("/Curriculum")
+      } else if (sectionValue === "assessment") {
+        navigate("/Assessment")
+      } else if (sectionValue === "administration") {
+        navigate("/MyKids")
+      } else if (sectionValue === "bus") {
+        navigate("/BusTracking")
+      } else if (sectionValue === "cashlessWallet") {
+        navigate("/CashlessWallet")
+      } else if (sectionValue === "eLearning") {
+        navigate("/Elearning")
+      } else if (sectionValue === "communication") {
+        navigate("/Chat")
+      } else if (sectionValue === "myDiary") {
+        navigate("/MyDiary")
+      } else if (sectionValue === "settings") {
+        navigate("/PersonalDetails")
+      } else {
+        navigate("/dashboard")
+      }
+      setDemoModal(false)
+    }).catch((err) => {
+      console.log(err)
+    })
+  };
+
   return (
     <div>
+      {/* {currentRoute === "/" ? "" :
+        <div class="main-btn-wrapper DemoNextPreviousBTN">
+          <button class="cx-btn-2">Previous</button>
+          </div>
+        } */}
+      {currentRoute === "/" ? "" :
+        <div className="main-btn-wrapper DemoNextPreviousBTN">
+          <button class="cx-btn-1" onClick={() => { setDemoModal(true) }}>Other Demo</button>
+        </div>
+      }
       <div className="">
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/DemoFrom" element={<DemoFrom />} />
-          <Route path="LoginWithOTP" element={<LoginWithOTP />} />
-          <Route path="ParentSignUp" element={<ParentSignUp />} />
-          <Route path="ForgotPassword" element={<ForgotPassword />} />
-          <Route path="Lock" element={<Lock />} />
-          {/* <Route path="ParentRegistration" element={<ParentRegistration />} /> */}
+          <Route path="/" element={<DemoFrom />} />
           <Route path="SchoolRegistration" element={<SchoolRegistration type={"School"} />} />
           <Route path="TeacherRegistration" element={<TeacherRegistration type={"Teacher"} />} />
           <Route path="ParentRegistration" element={<TeacherRegistration type={"Parent"} />} />
@@ -185,6 +279,118 @@ function App() {
           <Route path="RechargeWallet" element={<RechargeWallet />} />
         </Routes>
       </div>
+      <Modal
+        show={dedmoModal}
+        // onHide={setDemoBTn(false)}
+        centered
+        className="common-model"
+      >
+        <Modal.Header>
+          <Modal.Title>Free Demos</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p className="headingModalNext">Hi <span>{formData && formData.name}</span></p>
+          <p>Would You like to See more Demo...?</p>
+          <div className=" innerSelectBox weekcounder ">
+            <div className="customRow">
+              <div className="row">
+                <div className="col-lg-6">
+                  <label htmlFor="label1" className="singleConatinBox" onClick={() => { setSectionValue("dashboard") }}>
+                    <span>Dashboard</span>
+                    <input type="radio" name="labelz" id="label1" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label2" className="singleConatinBox" onClick={() => { setSectionValue("attendance") }}>
+                    <span>Attendance</span>
+                    <input type="radio" name="labelz" id="label2" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label3" className="singleConatinBox" onClick={() => { setSectionValue("academics") }}>
+                    <span htmlFor="">Academics</span>
+                    <input type="radio" name="labelz" id="label3" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label4" className="singleConatinBox" onClick={() => { setSectionValue("eLearning") }}>
+                    <span htmlFor="">e-Learning</span>
+                    <input type="radio" name="labelz" id="label4" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label5" className="singleConatinBox" onClick={() => { setSectionValue("assessment") }}>
+                    <span>Assessment</span>
+                    <input type="radio" name="labelz" id="label5" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label6" className="singleConatinBox" onClick={() => { setSectionValue("administration") }}>
+                    <span htmlFor="">Administration</span>
+                    <input type="radio" name="labelz" id="label6" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label7" className="singleConatinBox" onClick={() => { setSectionValue("cashlessWallet") }}>
+                    <span htmlFor="">Cashless Wallet</span>
+                    <input type="radio" name="labelz" id="label7" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label8" className="singleConatinBox" onClick={() => { setSectionValue("bus") }}>
+                    <span htmlFor="">Bus</span>
+                    <input type="radio" name="labelz" id="label8" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label9" className="singleConatinBox" onClick={() => { setSectionValue("communication") }}>
+                    <span htmlFor="">Communication</span>
+                    <input type="radio" name="labelz" id="label9" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label10" className="singleConatinBox" onClick={() => { setSectionValue("myDiary") }}>
+                    <span htmlFor="">My Diary</span>
+                    <input type="radio" name="labelz" id="label10" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+                <div className="col-lg-6">
+                  <label htmlFor="label11" className="singleConatinBox" onClick={() => { setSectionValue("settings") }}>
+                    <span htmlFor="">Settings</span>
+                    <input type="radio" name="labelz" id="label11" className="cheackcat" />
+                    <div className="cheackcatdiv"></div>
+                  </label>
+                </div>
+              </div>
+            </div >
+          </div>
+        </Modal.Body>
+        <Modal.Footer className="">
+          <div class="main-btn-wrapper">
+            <button className="cx-btn-1" onClick={() => {
+              setDemoModal(false);
+            }}>
+              Cancel
+            </button>
+            <button className="cx-btn-2" onClick={() => {
+              NextDemoBTNSubmit();
+            }}
+            >
+              Show Demo
+            </button>
+          </div>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

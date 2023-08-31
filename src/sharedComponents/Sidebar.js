@@ -22,12 +22,10 @@ const Sidebar = () => {
   const [attendance, setAttendance] = useState(false);
   const [dashboard, setDashboard] = useState(false);
 
-  const { sidebar, setSidebar } = useContext(AppContext);
-
+  const { sidebar, setSidebar, setSectionValue, sectionValue } = useContext(AppContext);
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
-
   // useEffect(() => {
   //   MobileSidebar();
   // }, [isMobile]);
@@ -59,684 +57,863 @@ const Sidebar = () => {
         <div className="menus-wrapper">
           <Accordion>
             {/* ================== > DASHBOARD START <================== */}
-
-            <Link
-              to="/Dashboard"
-              className="d-block menu-link"
-              onClick={() => (isMobile ? setSidebar(true) : setSidebar(false))}
-            >
-              <div
-                // onClick={()=>{setDashboard(true);
-                //   setAttendance(false)}}
-                className={
-                  currentRoute === "/Dashboard"
-                    ? // dashboard
-                      "menu-outer-warpper activeMenu"
-                    : "menu-outer-warpper"
-                }
+            {sectionValue === "dashboard" ?
+              <Link
+                to="/Dashboard"
+                className="d-block menu-link"
+                onClick={() => (isMobile ? setSidebar(true) : setSidebar(false))}
               >
-                <div className="icon">
-                  <img src={ic_dashboard} alt="" />
+                <div
+                  // onClick={()=>{setDashboard(true);
+                  //   setAttendance(false)}}
+                  className={
+                    currentRoute === "/dashboard"
+                      ? // dashboard
+                      "menu-outer-warpper activeMenu"
+                      : "menu-outer-warpper"
+                  }
+                >
+                  <div className="icon">
+                    <img src={ic_dashboard} alt="" />
+                  </div>
+                  <div className="menu-name">Dashboard</div>
                 </div>
-                <div className="menu-name">Dashboard</div>
-              </div>
-            </Link>
+              </Link>
+              : null}
             {/* ================== > DASHBOARD START <================== */}
 
             {/* ================== > ATTENDENCE START <================== */}
-
-            <Accordion.Item
-              onClick={() => {
-                setAttendance(!attendance);
-                setDashboard(false);
-              }}
-              eventKey="0"
-              className={
-                currentRoute === "/Calendar" ||
-                currentRoute === "/Leaves" ||
-                currentRoute === "/ApplyLeave" ||
-                currentRoute === "/EditLeave" ||
-                currentRoute === "/AttendanceDetails"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_attendance} alt="" />
+            {sectionValue === "attendance" ?
+              <Accordion.Item
+                onClick={() => {
+                  setAttendance(!attendance);
+                  setDashboard(false);
+                }}
+                eventKey="0"
+                className={
+                  currentRoute === "/Calendar" ||
+                    currentRoute === "/Leaves" ||
+                    currentRoute === "/ApplyLeave" ||
+                    currentRoute === "/EditLeave" ||
+                    currentRoute === "/AttendanceDetails"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_attendance} alt="" />
+                    </div>
+                    <div className="menu-name">Attendence </div>
                   </div>
-                  <div className="menu-name">Attendence </div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        currentRoute === "/Calendar" && "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Calendar"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/Calendar" && "activeMenuList"
                         }
                       >
-                        Calendar
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/AttendanceDetails" &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/AttendanceDetails"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Calendar"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Calendar
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/AttendanceDetails" &&
+                          "activeMenuList"
                         }
                       >
-                        Attendance Details
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/Leaves" ||
-                        currentRoute === "/ApplyLeave" ||
-                        currentRoute === "/EditLeave"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Leaves"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/AttendanceDetails"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Attendance Details
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Leaves" ||
+                            currentRoute === "/ApplyLeave" ||
+                            currentRoute === "/EditLeave"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Leaves
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Leaves"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Leaves
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
             {/* ================== > ATTENDENCE END <================== */}
 
             {/* ================== > Academics START <================== */}
-            <Accordion.Item
-              eventKey="1"
-              className={
-                currentRoute === "/Curriculum" ||
-                currentRoute === "/Topic" ||
-                currentRoute === "/Assignment" ||
-                currentRoute === "/DailyAssignmentwithoutReview" ||
-                currentRoute === "/DailyAssignmentwithReview" ||
-                currentRoute === "/IncompleteAssignment" ||
-                currentRoute === "/Assessment" ||
-                currentRoute === "/DailyAssessmentwithoutReview" ||
-                currentRoute === "/Assessment" ||
-                currentRoute === "/DailyAssessmentwithoutReview" ||
-                currentRoute === "/Elearning" ||
-                currentRoute === "/ElearningSubjectTopic" ||
-                currentRoute === "/StudyMaterial" ||
-                currentRoute === "/StudyMaterialTopicDetails" ||
-                currentRoute === "/Courses" ||
-                currentRoute === "/AboutCourseDetails" ||
-                currentRoute === "/BuyCourseDetails"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_academics} alt="" />
+            {sectionValue === "academics" ?
+              <Accordion.Item
+                eventKey="1"
+                className={
+                  currentRoute === "/Curriculum" ||
+                    currentRoute === "/Topic" ||
+                    currentRoute === "/Assignment" ||
+                    currentRoute === "/DailyAssignmentwithoutReview" ||
+                    currentRoute === "/IncompleteAssignment" ||
+                    currentRoute === "/DailyAssignmentwithReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Elearning" ||
+                    currentRoute === "/ElearningSubjectTopic" ||
+                    currentRoute === "/StudyMaterial" ||
+                    currentRoute === "/StudyMaterialTopicDetails" ||
+                    currentRoute === "/mycart" ||
+                    currentRoute === "/Courses" ||
+                    currentRoute === "/AboutCourseDetails" ||
+                    currentRoute === "/BuyCourseDetails"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_academics} alt="" />
+                    </div>
+                    <div className="menu-name">Academics </div>
                   </div>
-                  <div className="menu-name">Academics </div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        currentRoute === "/Curriculum" ||
-                        currentRoute === "/Topic"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Curriculum"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/Curriculum" ||
+                            currentRoute === "/Topic"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Curriculum
-                      </Link>
-                    </li>
-
-                    <li
-                      className={
-                        currentRoute === "/Assignment" ||
-                        currentRoute === "/DailyAssignmentwithoutReview" ||
-                        currentRoute === "/DailyAssignmentwithReview" ||
-                        currentRoute === "/IncompleteAssignment"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Assignment"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Curriculum"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Curriculum
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Assignment" ||
+                            currentRoute === "/DailyAssignmentwithoutReview" ||
+                            currentRoute === "/DailyAssignmentwithReview" ||
+                            currentRoute === "/IncompleteAssignment"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Assignment
-                      </Link>
-                    </li>
-
-                    <li
-                      className={
-                        currentRoute === "/Assessment" ||
-                        currentRoute === "/DailyAssessmentwithoutReview"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Assessment"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Assignment"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Assignment
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Elearning" ||
+                            currentRoute === "/ElearningSubjectTopic"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Assessment
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/Elearning" ||
-                        currentRoute === "/ElearningSubjectTopic"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Elearning"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Elearning"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          E-Learning
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/StudyMaterial" ||
+                            currentRoute === "/mycart" ||
+                            currentRoute === "/StudyMaterialTopicDetails"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        E-Learning
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/StudyMaterial" ||
-                        currentRoute === "/StudyMaterialTopicDetails"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/StudyMaterial"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/StudyMaterial"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Study Material
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Courses" ||
+                            currentRoute === "/AboutCourseDetails" ||
+                            currentRoute === "/BuyCourseDetails"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Study Material
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/Courses" ||
-                        currentRoute === "/AboutCourseDetails" ||
-                        currentRoute === "/BuyCourseDetails"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Courses"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Courses"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Courses
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Assessment" ||
+                            currentRoute === "/DailyAssessmentwithoutReview"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Courses
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Assessment"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Assessment
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
+            {sectionValue === "eLearning" ?
+              <Accordion.Item
+                eventKey="1"
+                className={
+                  currentRoute === "/Curriculum" ||
+                    currentRoute === "/Topic" ||
+                    currentRoute === "/Assignment" ||
+                    currentRoute === "/DailyAssignmentwithoutReview" ||
+                    currentRoute === "/IncompleteAssignment" ||
+                    currentRoute === "/DailyAssignmentwithReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Elearning" ||
+                    currentRoute === "/ElearningSubjectTopic" ||
+                    currentRoute === "/StudyMaterial" ||
+                    currentRoute === "/StudyMaterialTopicDetails" ||
+                    currentRoute === "/mycart" ||
+                    currentRoute === "/Courses" ||
+                    currentRoute === "/AboutCourseDetails" ||
+                    currentRoute === "/BuyCourseDetails"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_academics} alt="" />
+                    </div>
+                    <div className="menu-name">Academics </div>
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/Elearning" ||
+                            currentRoute === "/ElearningSubjectTopic"
+                            ? "activeMenuList"
+                            : ""
+                        }
+                      >
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Elearning"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          E-Learning
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
+            {sectionValue === "assessment" ?
+              <Accordion.Item
+                eventKey="1"
+                className={
+                  currentRoute === "/Curriculum" ||
+                    currentRoute === "/Topic" ||
+                    currentRoute === "/Assignment" ||
+                    currentRoute === "/DailyAssignmentwithoutReview" ||
+                    currentRoute === "/IncompleteAssignment" ||
+                    currentRoute === "/DailyAssignmentwithReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Assessment" ||
+                    currentRoute === "/DailyAssessmentwithoutReview" ||
+                    currentRoute === "/Elearning" ||
+                    currentRoute === "/ElearningSubjectTopic" ||
+                    currentRoute === "/StudyMaterial" ||
+                    currentRoute === "/StudyMaterialTopicDetails" ||
+                    currentRoute === "/mycart" ||
+                    currentRoute === "/Courses" ||
+                    currentRoute === "/AboutCourseDetails" ||
+                    currentRoute === "/BuyCourseDetails"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_academics} alt="" />
+                    </div>
+                    <div className="menu-name">Academics </div>
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/Assessment" ||
+                            currentRoute === "/DailyAssessmentwithoutReview"
+                            ? "activeMenuList"
+                            : ""
+                        }
+                      >
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Assessment"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Assessment
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item> : null}
             {/* ================== > Academics END <================== */}
 
             {/* ================== > Administration START <================== */}
-            <Accordion.Item
-              eventKey="2"
-              className={
-                currentRoute === "/MyKids" ||
-                currentRoute === "/IdCards" ||
-                currentRoute === "/EditKidsDetails" ||
-                currentRoute === "/EditRegistration" ||
-                currentRoute === "/NewRegistration" ||
-                currentRoute === "/ViewKidsDetails" ||
-                currentRoute === "/ViewRegistration" ||
-                currentRoute === "/Fees" ||
-                currentRoute === "/document" ||
-                currentRoute === "/Certificate" ||
-                currentRoute === "/InvoiceFee" ||
-                currentRoute === "/TransferCertificate" ||
-                currentRoute === "/RequestNewTc"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_administrator} alt="" />
+            {sectionValue === "administration" ?
+              <Accordion.Item
+                eventKey="2"
+                className={
+                  currentRoute === "/MyKids" ||
+                    currentRoute === "/IdCards" ||
+                    currentRoute === "/EditKidsDetails" ||
+                    currentRoute === "/EditRegistration" ||
+                    currentRoute === "/NewRegistration" ||
+                    currentRoute === "/ViewKidsDetails" ||
+                    currentRoute === "/ViewRegistration" ||
+                    currentRoute === "/Fees" ||
+                    currentRoute === "/document" ||
+                    currentRoute === "/Certificate" ||
+                    currentRoute === "/InvoiceFee" ||
+                    currentRoute === "/TransferCertificate" ||
+                    currentRoute === "/RequestNewTc"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_administrator} alt="" />
+                    </div>
+                    <div className="menu-name">Administration</div>
                   </div>
-                  <div className="menu-name">Administration</div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        currentRoute === "/MyKids" ||
-                        currentRoute === "/NewRegistration" ||
-                        currentRoute === "/ViewKidsDetails" ||
-                        currentRoute === "/IdCards" ||
-                        currentRoute === "/ViewRegistration" ||
-                        currentRoute === "/EditRegistration" ||
-                        currentRoute === "/EditKidsDetails"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/MyKids"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/MyKids" ||
+                            currentRoute === "/NewRegistration" ||
+                            currentRoute === "/ViewKidsDetails" ||
+                            currentRoute === "/IdCards" ||
+                            currentRoute === "/ViewRegistration" ||
+                            currentRoute === "/EditRegistration" ||
+                            currentRoute === "/EditKidsDetails"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        My Kids
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/Fees" ||
-                        currentRoute === "/InvoiceFee"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Fees"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/MyKids"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          My Kids
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/Fees" ||
+                            currentRoute === "/InvoiceFee"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Fees
-                      </Link>
-                    </li>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Fees"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Fees
+                        </Link>
+                      </li>
 
-                    <li
-                      className={
-                        (currentRoute === "/TransferCertificate" || currentRoute=="/RequestNewTc") &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/TransferCertificate"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                      <li
+                        className={
+                          (currentRoute === "/TransferCertificate" || currentRoute == "/RequestNewTc") &&
+                          "activeMenuList"
                         }
                       >
-                        Transfer Certificate
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/document" ||
-                        currentRoute === "/Certificate"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/document"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/TransferCertificate"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Transfer Certificate
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/document" ||
+                            currentRoute === "/Certificate"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Documents
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/document"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Documents
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
             {/* ================== > Administration END <================== */}
 
             {/* ================== > Cashless Wallet START <================== */}
-            <Link to="/CashlessWallet" className="d-block menu-link">
-              <div
-                // onClick={()=>{setDashboard(true);
-                //   setAttendance(false)}}
-                className={
-                  currentRoute === "/CashlessWallet" ||
-                  currentRoute === "/RechargeWallet"
-                    ? // dashboard
+            {sectionValue === "cashlessWallet" ?
+              <Link to="/CashlessWallet" className="d-block menu-link">
+                <div
+                  // onClick={()=>{setDashboard(true);
+                  //   setAttendance(false)}}
+                  className={
+                    currentRoute === "/CashlessWallet" ||
+                      currentRoute === "/RechargeWallet"
+                      ? // dashboard
                       "menu-outer-warpper activeMenu"
-                    : "menu-outer-warpper"
-                }
-              >
-                <div className="icon">
-                  <img src={ic_cashless} alt="" />
+                      : "menu-outer-warpper"
+                  }
+                >
+                  <div className="icon">
+                    <img src={ic_cashless} alt="" />
+                  </div>
+                  <div className="menu-name">Cashless Wallet</div>
                 </div>
-                <div className="menu-name">Cashless Wallet</div>
-              </div>
-            </Link>
+              </Link>
+              : null}
             {/* ================== > Cashless Wallet END <================== */}
 
             {/* ================== > Bus Tracking START <================== */}
-            <Accordion.Item
-              eventKey="3"
-              className={
-                currentRoute === "/BusTracking" ||
-                currentRoute === "/AuthorisedPerson" ||
-                currentRoute === "/ViewAuthorisedPerson" ||
-                currentRoute === "/CreateAuthorisedPerson" ||
-                currentRoute === "/EditAuthorisedPerson" ||
-                currentRoute === "/RenewTransportation"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_bus_tracking} alt="" />
+            {sectionValue === "bus" ?
+              <Accordion.Item
+                eventKey="3"
+                className={
+                  currentRoute === "/BusTracking" ||
+                    currentRoute === "/AuthorisedPerson" ||
+                    currentRoute === "/ViewAuthorisedPerson" ||
+                    currentRoute === "/CreateAuthorisedPerson" ||
+                    currentRoute === "/EditAuthorisedPerson" ||
+                    currentRoute === "/RenewTransportation"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_bus_tracking} alt="" />
+                    </div>
+                    <div className="menu-name">Bus Tracking</div>
                   </div>
-                  <div className="menu-name">Bus Tracking</div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        currentRoute === "/BusTracking" && "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/BusTracking"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/BusTracking" && "activeMenuList"
                         }
                       >
-                        Track Bus
-                      </Link>
-                    </li>
-                    <li className={currentRoute === "#" && "activeMenuList"}>
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="#"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
-                        }
-                      >
-                        Route
-                      </Link>
-                    </li>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/BusTracking"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Track Bus
+                        </Link>
+                      </li>
+                      <li className={currentRoute === "#" && "activeMenuList"}>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="#"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Route
+                        </Link>
+                      </li>
 
-                    <li
-                      className={
-                        (currentRoute === "/AuthorisedPerson" ||
-                          currentRoute === "/CreateAuthorisedPerson" ||
-                          currentRoute === "/ViewAuthorisedPerson") &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/AuthorisedPerson"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                      <li
+                        className={
+                          (currentRoute === "/AuthorisedPerson" ||
+                            currentRoute === "/CreateAuthorisedPerson" ||
+                            currentRoute === "/ViewAuthorisedPerson") &&
+                          "activeMenuList"
                         }
                       >
-                        Authorized Person
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/RenewTransportation" &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/RenewTransportation"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/AuthorisedPerson"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Authorized Person
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/RenewTransportation" &&
+                          "activeMenuList"
                         }
                       >
-                        Renew Transportation
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/RenewTransportation"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Renew Transportation
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
             {/* ================== > Bus Tracking END <================== */}
 
             {/* ================== > Communication START <================== */}
-            <Accordion.Item
-              eventKey="4"
-              className={
-                currentRoute === "/Chat" ||
-                currentRoute === "/ComposeMessage" ||
-                currentRoute === "/NoticeBoard" ||
-                currentRoute === "/NoticeDetail" ||
-                currentRoute === "/VideoConference" ||
-                currentRoute === "/MyDiary"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_communication} alt="" />
+            {sectionValue === "communication" ?
+              <Accordion.Item
+                eventKey="4"
+                className={
+                  currentRoute === "/Chat" ||
+                    currentRoute === "/ComposeMessage" ||
+                    currentRoute === "/NoticeBoard" ||
+                    currentRoute === "/NoticeDetail" ||
+                    currentRoute === "/VideoConference" ||
+                    currentRoute === "/MyDiary"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_communication} alt="" />
+                    </div>
+                    <div className="menu-name">Communication</div>
                   </div>
-                  <div className="menu-name">Communication</div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        (currentRoute === "/Chat" ||
-                          currentRoute === "/ComposeMessage") &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/Chat"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          (currentRoute === "/Chat" ||
+                            currentRoute === "/ComposeMessage") &&
+                          "activeMenuList"
                         }
                       >
-                        Chat
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/VideoConference" && "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/VideoConference"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/Chat"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Chat
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/VideoConference" && "activeMenuList"
                         }
                       >
-                        Video Conference
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        (currentRoute === "/NoticeBoard" ||
-                          currentRoute === "/NoticeDetail") &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/NoticeBoard"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/VideoConference"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Video Conference
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          (currentRoute === "/NoticeBoard" ||
+                            currentRoute === "/NoticeDetail") &&
+                          "activeMenuList"
                         }
                       >
-                        Notice Board
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        (currentRoute === "/MyDiary") &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/MyDiary"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/NoticeBoard"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Notice Board
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          (currentRoute === "/MyDiary") &&
+                          "activeMenuList"
                         }
                       >
-                       My Diary
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/MyDiary"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          My Diary
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
+            {sectionValue === "myDiary" ?
+              <Accordion.Item
+                eventKey="4"
+                className={
+                  currentRoute === "/Chat" ||
+                    currentRoute === "/ComposeMessage" ||
+                    currentRoute === "/NoticeBoard" ||
+                    currentRoute === "/NoticeDetail" ||
+                    currentRoute === "/VideoConference" ||
+                    currentRoute === "/MyDiary"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_communication} alt="" />
+                    </div>
+                    <div className="menu-name">Communication</div>
+                  </div>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          (currentRoute === "/MyDiary") &&
+                          "activeMenuList"
+                        }
+                      >
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/MyDiary"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          My Diary
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
             {/* ================== > Communication END <================== */}
 
             {/* ================== > Settings START <================== */}
-            <Accordion.Item
-              eventKey="5"
-              className={
-                currentRoute === "/PersonalDetails" ||
-                currentRoute === "/ChangePassword" ||
-                currentRoute === "/EditProfile" ||
-                currentRoute === "/NotificationSetting"
-                  ? "activeMenu"
-                  : ""
-              }
-            >
-              <Accordion.Header>
-                <div className="menu-outer-warpper">
-                  <div className="icon">
-                    <img src={ic_setting} alt="" />
+            {sectionValue === "settings" ?
+              <Accordion.Item
+                eventKey="5"
+                className={
+                  currentRoute === "/PersonalDetails" ||
+                    currentRoute === "/ChangePassword" ||
+                    currentRoute === "/EditProfile" ||
+                    currentRoute === "/NotificationSetting"
+                    ? "activeMenu"
+                    : ""
+                }
+              >
+                <Accordion.Header>
+                  <div className="menu-outer-warpper">
+                    <div className="icon">
+                      <img src={ic_setting} alt="" />
+                    </div>
+                    <div className="menu-name">Settings</div>
                   </div>
-                  <div className="menu-name">Settings</div>
-                </div>
-              </Accordion.Header>
-              <Accordion.Body>
-                <div className="sub-menus">
-                  <ul>
-                    <li
-                      className={
-                        currentRoute === "/PersonalDetails" ||
-                        currentRoute === "/EditProfile"
-                          ? "activeMenuList"
-                          : ""
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/PersonalDetails"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="sub-menus">
+                    <ul>
+                      <li
+                        className={
+                          currentRoute === "/PersonalDetails" ||
+                            currentRoute === "/EditProfile"
+                            ? "activeMenuList"
+                            : ""
                         }
                       >
-                        Personal Details
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/ChangePassword" && "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/ChangePassword"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/PersonalDetails"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Personal Details
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/ChangePassword" && "activeMenuList"
                         }
                       >
-                        Change Password
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "#" && "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="#"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/ChangePassword"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Change Password
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "#" && "activeMenuList"
                         }
                       >
-                        Language
-                      </Link>
-                    </li>
-                    <li
-                      className={
-                        currentRoute === "/NotificationSetting" &&
-                        "activeMenuList"
-                      }
-                    >
-                      <span className="menu-circle"></span>
-                      <Link
-                        to="/NotificationSetting"
-                        onClick={() =>
-                          isMobile ? setSidebar(true) : setSidebar(false)
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="#"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Language
+                        </Link>
+                      </li>
+                      <li
+                        className={
+                          currentRoute === "/NotificationSetting" &&
+                          "activeMenuList"
                         }
                       >
-                        Notification Settings
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Accordion.Body>
-            </Accordion.Item>
+                        <span className="menu-circle"></span>
+                        <Link
+                          to="/NotificationSetting"
+                          onClick={() =>
+                            isMobile ? setSidebar(true) : setSidebar(false)
+                          }
+                        >
+                          Notification Settings
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              : null}
             {/* ================== > Settings END <================== */}
           </Accordion>
 
